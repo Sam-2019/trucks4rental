@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+.vehicle-card__ribbon {
+ position: absolute;
+ top: 15px;
+ left: -125px;
+ z-index: 4;
+ display: block;
+ width: 300px;
+ line-height: 30px;
+ letter-spacing: 1px;
+ padding: 3px 0;
+ background-color: #021f6e;
+ color: #fff;
+ text-align: center;
+ font-size: 1rem;
+ -webkit-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+}
+
+.section {
+ color: #fff;
+ text-align: center;
+}
+
+/* Backgrounds colors for sections */
+.fp-section:nth-child(1) {
+ background-image: linear-gradient(128deg, #40afff, #3f61ff);
+}
