@@ -42,7 +42,7 @@ const SpecifyForm = () => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-2">
         <div className="flex flex-col md:flex-col w-full gap-4 pb-2 md:pb-0">
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="specification" className="">
@@ -74,7 +74,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="configuration" className="">
@@ -105,7 +105,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="suspensionType" className="">
@@ -136,7 +136,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="brand" className="">
@@ -165,7 +165,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="price" className="">
@@ -188,7 +188,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="matriculationYear" className="">
@@ -214,7 +214,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="mileage" className="">
@@ -238,7 +238,7 @@ const SpecifyForm = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col">
+          <div className="flex flex-col">
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">
                 <label htmlFor="emissionStandard" className="">
