@@ -8,6 +8,7 @@ import { DualRangeSlider } from "@/components/ui/dual-range-slider";
 
 const SpecifyForm = () => {
   const [values, setValues] = useState([0, 100]);
+
   const {
     register,
     handleSubmit,
@@ -25,6 +26,7 @@ const SpecifyForm = () => {
       emissionStandard: "",
     },
   });
+
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -116,42 +118,45 @@ const SpecifyForm = () => {
             <p className="text-red-300 text-sm">{errors.brand?.message}</p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-2 w-full">
-            <div className="w-auto md:w-80 flex flex-row items-center">
+          <div className="flex flex-col md:flex-row gap-2 w-full items-center">
+            <div className="items-center w-full md:w-78">
               <label htmlFor="price" className="">
                 Price
               </label>
             </div>
-            <input
-              id="price"
-              type="price"
-              {...register("price", { required: true })}
-              className="
-     py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all
-     border-1 border-red-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
-     "
-            />
 
-            <DualRangeSlider
-              {...register("price", { required: true })}
-              label={(value) => value}
-              value={values}
-              onValueChange={setValues}
-              min={0}
-              max={100}
-              step={1}
-            />
+            <div className="flex flex-row border-1 border-red-500 space-x-2">
+              <input
+                value={values[0]}
+                id="minPrice"
+                type="none"
+                {...register("minPrice", { required: true })}
+                className="py-2 px-2 flex items-center p-1 transition-all border-1 border-red-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none w-25"
+              />
 
-            <input
-              id="price"
-              type="price"
-              {...register("price", { required: true })}
-              className="
-     py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all
-     border-1 border-red-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
-     "
-            />
-            <p className="text-red-300 text-sm">{errors.price?.message}</p>
+              <div className="border-1 border-green-600 ">
+                <DualRangeSlider
+                className="w-98"
+                  {...register("price", { required: true })}
+                  // label={(value) => value}
+                  value={values}
+                  onValueChange={setValues}
+                  min={0}
+                  max={100}
+                  step={1}
+                />
+              </div>
+
+              <input
+                value={values[1]}
+                id="maxPrice"
+                type="none"
+                {...register("maxPrice", { required: true })}
+                className="py-2 px-2 flex items-center p-1 transition-all border-1 border-red-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none w-25"
+              />
+            </div>
+
+            {/* <p className="text-red-300 text-sm">{errors.price?.message}</p> */}
           </div>
 
           <div className="flex flex-col md:flex-row gap-2 w-full">

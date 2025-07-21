@@ -15,7 +15,7 @@ import Find from "./steps/find";
 const RequestModal = ({ open, onClose }) => {
  return (
   <Dialog open={open} onOpenChange={onClose} className="bg-white border-2 border-green-500">
-   <DialogContent className="bg-white !max-w-200">
+   <DialogContent className="bg-white !max-w-300">
     <DialogTitle />
     <DialogDescription />
     <Stepper onClose={onClose} />
