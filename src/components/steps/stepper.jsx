@@ -79,7 +79,7 @@ const Stepper = ({ onClose }) => {
           <StepIndicators steps={steps} currentStep={currentStep} />
         </div>
 
-        <div className="w-full border-2 border-red-500">
+        <div className="w-ful">
           {steps[0].index === currentStep && (
             <Specify nextStep={nextStep} onClose={onClose} />
           )}

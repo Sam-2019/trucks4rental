@@ -72,13 +72,13 @@ export default function Specify({ nextStep, onClose }) {
                 // setSelectedTruck(truckType?.id);
                 truckSelection(truckType?.id);
               }}
-              className={`flex flex-row items-center  hover:text-blue-600 hover:underline underline-offset-8 space-x-2 text-sm font-medium text-gray-700 rounded-lg  border-2 border-red-500 px-2 py-${2}`}
+              className={`flex flex-row items-center  hover:text-blue-600 hover:underline underline-offset-8 space-x-2 text-sm font-medium text-gray-700 rounded-lg px-2 py-${2}`}
             >
               <img
                 src={truckType.file}
                 alt="Italian Trulli"
                 height={50}
-                className="w-25 text-center border-2 border-red-500"
+                className="w-25 text-center"
               />
               <p className="text-gray-600 leading-relaxed">{truckType.name}</p>
             </button>
