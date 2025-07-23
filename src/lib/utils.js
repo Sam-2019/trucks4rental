@@ -67,6 +67,17 @@ export const requestSchema = yup
   })
   .required();
 
+export const truckInfo = yup
+  .object({
+    brand: yup.string().required("Required"),
+    specification: yup.string().required("Required"),
+    configuration: yup.string().required("Required"),
+    suspensionType: yup.string().required("Required"),
+    emissionStandard: yup.string().required("Required"),
+
+  })
+  .required();
+
 export const defaultPlaceholder = "m@example.com";
 
 export const siteName = "Trucks4Rental";
@@ -126,36 +137,41 @@ export const clearArray = (arr) => {
 
 export const truckTypes = [
   {
-    id: 4,
+    id: 0,
     name: "Tipper",
+    otherName: "Tipper",
     file: tipper,
     padding_y: 5,
     route: "/stocks?kind-tipper=true",
   },
   {
-    id: 2,
+    id: 1,
     name: "Semi Trailer",
+    otherName: "Semi-trailer",
     file: semi_trailer,
     padding_y: 5,
     route: "/stocks?kind-semitrailer=true",
   },
   {
-    id: 3,
+    id: 2,
     name: "Truck",
+    otherName: "Truck",
     file: truck,
     padding_y: 5,
     route: "/stocks?kind-truck=true",
   },
   {
-    id: 5,
+    id: 3,
     name: "Trailer",
+    otherName: "Trailer",
     file: trailer,
     padding_y: 5,
     route: "/stocks?kind-trailer=true",
   },
   {
-    id: 1,
+    id: 4,
     name: "Tractor",
+    otherName: "Tractor unit",
     file: tractor_unit,
     padding_y: 1,
     route: "/stocks?kind-tractorunit=true",
@@ -1010,14 +1026,7 @@ export const headers = {
         displayName: "Brand: LAMBRECHT",
         value: "Lambrecht",
       },
-      {
-        item: "LAMBRECHT",
-        qty: 1,
-        index: 46,
-        searchParam: "brand-lambrecht",
-        displayName: "Brand: LAMBRECHT",
-        value: "Lambrecht",
-      },
+
       {
         item: "LANGENDORF",
         qty: 1,
@@ -2419,7 +2428,7 @@ export const blockCourtOptions = [
 export const specifications = [
   {
     index: headers.Specification.subList.length + 1,
-    item: "Select an option...",
+    item: "Select specification...",
     value: "",
     disable: true,
   },
@@ -2429,7 +2438,7 @@ export const specifications = [
 export const configurations = [
   {
     index: headers.Configuration.subList.length + 1,
-    item: "Select an option...",
+    item: "Select chasis configuration...",
     value: "",
     disable: true,
   },
@@ -2439,7 +2448,7 @@ export const configurations = [
 export const suspensionType = [
   {
     index: 0,
-    item: "Select an option...",
+    item: "Select suspension type...",
     value: "",
     disable: true,
   },
@@ -2468,7 +2477,7 @@ export const suspensionType = [
 export const brand = [
   {
     index: headers.Brand.subList.length + 1,
-    item: "Select an option...",
+    item: "Select brand...",
     value: "",
     disable: true,
   },
@@ -2478,7 +2487,7 @@ export const brand = [
 export const emissionStandard = [
   {
     index: 0,
-    item: "Select an option...",
+    item: "Select emission standard...",
     value: "",
     disable: true,
   },
