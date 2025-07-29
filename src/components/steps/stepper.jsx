@@ -1,7 +1,7 @@
-import { useState, useCallback, useEffect, useRef } from "react";
 import Find from "./find";
 import Search from "./search";
 import Specify from "./specify/index";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 // const steps = [
 //  { index: 0, subIndex: 0, title: "You Specify", component: <Search /> },
@@ -16,10 +16,6 @@ import Specify from "./specify/index";
 //  { index: 2, subIndex: 7, title: "Find 1", component: <SubPage name="Find 1" /> },
 //  { index: 2, subIndex: 8, title: "Find 2", component: <SubPage name="Find 2" /> },
 // ];
-
-const SubPage = (name) => {
-  return <div>{name}</div>;
-};
 
 const steps = [
   { index: 0, subIndex: 0, title: "You Specify", component: <Search /> },
@@ -91,7 +87,7 @@ const Stepper = ({ onClose }) => {
           {/* {steps[4].subIndex === currentStep && <SubPage name="Search 1" nextStep={nextStep} prevStep={prevStep} />}
      {steps[5].subIndex === currentStep && <SubPage name="Search 1" nextStep={nextStep} prevStep={prevStep} />} */}
           {steps[2].index === currentStep && (
-            <Find nextStep={nextStep} prevStep={prevStep} />
+            <Find nextStep={nextStep} prevStep={prevStep} onClose={onClose}  />
           )}
           {/* {steps[7].subIndex === currentStep && <SubPage name="Find 1" nextStep={nextStep} prevStep={prevStep} />}
      {steps[8].subIndex === currentStep && <SubPage name="Find 1" nextStep={nextStep} prevStep={prevStep} />} */}

@@ -202,9 +202,9 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
                 {prices[0]}
               </p>
 
-              <div className="border-1 border-green-600 w-full md:w-full">
+              <div className=" w-full md:w-full">
                 <DualRangeSlider
-                  className="w-full"
+                  className="w-full border-1 border-red-200 bg-white rounded-lg"
                   // {...register("price", { required: true })}
                   // label={(value) => value}
                   value={prices}
@@ -238,9 +238,9 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
               <p className="py-2 px-2 items-center p-1 transition-all border-1 border-red-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none w-20 md:w-50 text-center">
                 {matriculationYears[0]}
               </p>
-              <div className="border-1 border-green-600 w-full md:w-full">
+              <div className="w-full md:w-full">
                 <DualRangeSlider
-                  className="w-full"
+                  className="w-full border-1 border-red-200 bg-white rounded-lg"
                   // {...register("price", { required: true })}
                   // label={(value) => value}
                   value={matriculationYears}
@@ -274,9 +274,9 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
               <p className="py-2 px-2 items-center p-1 transition-all border-1 border-red-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none w-20 md:w-50 text-center">
                 {mileages[0]}
               </p>
-              <div className="border-1 border-green-600 w-full md:w-full">
+              <div className="w-full md:w-full">
                 <DualRangeSlider
-                  className="w-full"
+                  className="w-full border-1 border-red-200 bg-white rounded-lg"
                   // {...register("price", { required: true })}
                   // label={(value) => value}
                   value={mileages}

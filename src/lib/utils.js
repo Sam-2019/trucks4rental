@@ -42,9 +42,7 @@ export const resetSchema = yup
 export const requestSchema = yup
   .object({
     firstName: yup.string().required("First name is required."),
-
     lastName: yup.string().required("Last name is required."),
-
     email: yup
       .string()
       .email()
@@ -61,9 +59,9 @@ export const requestSchema = yup
       .string()
       .required("Company name is required.")
       .matches(/^[A-Za-z]+(?:\s[A-Za-z]{3,}){1,2}$/, "Name is invalid."),
-    contactPhone: yup.bool().default(false),
-    contactEmail: yup.bool().default(false),
-    contactWhatsapp: yup.bool().default(false),
+    contactPhone: yup.bool().required("Required"),
+    contactEmail: yup.bool().required("Required"),
+    contactWhatsapp: yup.bool().required("Required"),
   })
   .required();
 
@@ -74,7 +72,6 @@ export const truckInfo = yup
     configuration: yup.string().required("Required"),
     suspensionType: yup.string().required("Required"),
     emissionStandard: yup.string().required("Required"),
-
   })
   .required();
 
@@ -171,7 +168,7 @@ export const truckTypes = [
   {
     id: 4,
     name: "Tractor",
-    otherName: "Tractor unit",
+    otherName: "Tractor",
     file: tractor_unit,
     padding_y: 1,
     route: "/stocks?kind-tractorunit=true",
