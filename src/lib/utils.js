@@ -13,6 +13,8 @@ import tipper from "../assets/icons/tipper.png";
 import trailer from "../assets/icons/trailer.png";
 import truck from "../assets/icons/truck.png";
 
+export const numberFormat = new Intl.NumberFormat("en-US");
+
 export const officeGMAP =
   "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3269.3558750992966!2d-0.017719521035658967!3d5.625376593192002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf87388b4bfbad%3A0x59f350be83913af0!2sAdumeah%20Plaza!5e1!3m2!1sen!2sgh!4v1750689651147!5m2!1sen!2sgh";
 
