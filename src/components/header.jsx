@@ -49,7 +49,7 @@ export default function Header() {
         type="search"
         placeholder="Search..."
         aria-label="Search for a truck"
-        className="w-full max-w-md mx-auto py-2 px-2 border-2 border-slate-200 hover:border-slate-500 focus:border-slate-300 focus:outline-none"
+        className="w-full max-w-md mx-auto py-2 px-2 border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none rounded-lg"
        />
       </div>
 

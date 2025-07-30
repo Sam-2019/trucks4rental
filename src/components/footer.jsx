@@ -54,11 +54,11 @@ export default function BottomNav() {
         type="email"
         aria-label="subscribe"
         placeholder="Enter your email address"
-        className="w-61 py-2 px-2 max-w-md border-2 border-white focus:border-slate-500 focus:outline-none bg-white"
+        className="w-61 py-2 px-2 max-w-md border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none bg-white rounded-l-lg"
        />
        <button
         type="button"
-        className="w-15 py-2 px-2 border-2 border-slate-500 hover:bg-primary/50 transition-all duration-300 hover:shadow-lg bg-slate-500 text-white"
+        className="w-15 py-2 px-2 border-1 border-slate-500 hover:bg-primary/50 transition-all duration-300 hover:shadow-lg bg-slate-500 text-white rounded-r-lg"
        >
         Join
        </button>

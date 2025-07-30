@@ -82,7 +82,7 @@ export default function Stocks() {
               type="search"
               aria-label="Search for a truck"
               placeholder="Search in filters..."
-              className="w-61 py-2 px-2 max-w-md border-2 border-slate-200 hover:border-slate-500 focus:border-slate-300 focus:outline-none"
+              className="w-61 py-2 px-2 max-w-md bg-white border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none rounded-lg"
             />
           </div>
 
@@ -101,15 +101,17 @@ export default function Stocks() {
 
               return (
                 <div className="space-y-3" key={header.key}>
-                  <p className="w-60 border-dark border-b font-medium">
+                  <p className="w-60 text-sm font-medium">
                     {header.name}
+                    <div className="my-1 border-t border-slate-300" />
                   </p>
+
                   {/* <CheckBox data={itemsToShow} handleCheckboxChange={handleCheckboxChange} checkState={checkedItems} /> */}
 
-                  <div className="flex flex-col gap-2 ">
+                  <div className="flex flex-col gap-2">
                     {itemsToShow.map((item) => (
                       <div key={item.index} className="flex items-center gap-2">
-                        <label>
+                        <label className="flex flex-row items-center">
                           <input
                             type="checkbox"
                             name={item.searchParam}
@@ -117,10 +119,12 @@ export default function Stocks() {
                             onChange={handleCheckboxChange}
                             className="mr-2"
                           />
-                          {`${item.item}`}
+
+                          <span className="text-sm font-normal mr-2">
+                            {`${item.item}`}
+                          </span>
                           {item.qty !== null && item.qty !== undefined && (
                             <span className="text-muted text-xs font-normal">
-                              {" "}
                               ({item.qty || item.count})
                             </span>
                           )}
@@ -135,17 +139,17 @@ export default function Stocks() {
                         if (e.key === "Enter" || e.key === " ")
                           setShowAll(!showAll);
                       }}
-                      className="text-dark hover:underline "
+                      className="text-dark hover:underline"
                     >
                       {showAll ? (
                         <div className="flex flex-row align-center items-center">
-                          <ChevronsUp size={20} />
-                          <div>Less</div>
+                          <ChevronsUp size={18} />
+                          <div className="text-muted text-sm">Less</div>
                         </div>
                       ) : (
                         <div className="flex flex-row align-center items-center">
-                          <ChevronsDown size={20} />
-                          <div>More</div>
+                          <ChevronsDown size={18} />
+                          <div className="text-muted text-sm">More</div>
                         </div>
                       )}
                     </div>
@@ -165,7 +169,7 @@ export default function Stocks() {
                 {displayNames.map((item) => (
                   <div
                     key={item.key}
-                    className="flex flex-row items-center bg-slate-200 rounded-lg py-1 px-2 hover:text-blue-600"
+                    className="flex flex-row items-center bg-slate-200 rounded-lg py-2 px-3 hover:text-blue-600"
                   >
                     <p className="w-auto mr-2">{item.key}</p>
                     <span>
@@ -179,7 +183,7 @@ export default function Stocks() {
               </div>
 
               <div
-                className="flex flex-row align-center items-center space-x-2 hover:text-blue-600"
+                className="flex flex-row align-center items-center space-x-2 cursor-default hover:text-white hover:bg-red-300 rounded-lg px-5 py-2"
                 onClick={() => handleClear()}
                 onKeyUp={(e) => {
                   if (e.key === "Enter" || e.key === " ") handleClear();
@@ -191,10 +195,10 @@ export default function Stocks() {
             </div>
           )}
 
-          <div className="flex flex-row justify-between w-full max-w-6xl items-center py-6 ">
+          <div className="flex flex-row justify-between w-full max-w-6xl items-center py-6">
             <p>856 Items in selection</p>
             <select
-              className="border border-gray-300 p-2 w-40"
+              className="border-1 border-gray-300 p-2 w-40 rounded-lg bg-white focus:outline-none"
               defaultValue="default-sorting"
             >
               <option value="price-asc">Price ˄</option>

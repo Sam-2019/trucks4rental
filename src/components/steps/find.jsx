@@ -29,14 +29,14 @@ export default function Find({ onClose }) {
         <div className="flex flex-row flex-wrap space-x-3 space-y-3">
           <Button asChild size="lg" className="border-1 border-gray-200">
             <NavLink to="#" className="flex flex-row items-center">
-              <Phone size={23} />
+              <Phone size={50} color="gray" />
               <p className="text-sm">Call us</p>
             </NavLink>
           </Button>
 
           <Button asChild size="lg" className="border-1 border-gray-200">
             <NavLink to="#" className="flex flex-row items-center">
-              <MessageCircle size={23} />
+              <MessageCircle size={50} color="gray" />
               <p className="text-sm">Chat with us</p>
             </NavLink>
           </Button>
@@ -44,7 +44,7 @@ export default function Find({ onClose }) {
           <Button asChild size="lg" className="border-1 border-gray-200">
             <NavLink to="#" className="flex flex-row items-center">
               <img src={whatappSvg} alt="whatsapp" width="20" />
-              <p className="text-sm"> Send a Whatsapp message</p>
+              <p className="text-sm">Send a Whatsapp message</p>
             </NavLink>
           </Button>
         </div>

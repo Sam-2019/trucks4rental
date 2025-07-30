@@ -35,7 +35,7 @@ export function SignupForm() {
       type="email"
       placeholder={defaultPlaceholder}
       {...register("email")}
-      className="py-2 px-2 w-full border-2 border-slate-200 hover:border-slate-500 focus:border-slate-300 focus:outline-none"
+      className="py-2 px-2 w-full border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none rounded-lg"
      />
      <p className="text-red-300 text-sm">{errors.email?.message}</p>
     </div>
@@ -46,14 +46,14 @@ export function SignupForm() {
       id="password"
       type="password"
       {...register("password")}
-      className="py-2 px-2 w-full border-2 border-slate-200 hover:border-slate-500 focus:border-slate-300 focus:outline-none"
+      className="py-2 px-2 w-full border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none rounded-lg"
      />
      <p className="text-red-300 text-sm">{errors.password?.message}</p>
     </div>
 
     <button
      type="submit"
-     className="py-2 px-2 w-full border-2 border-slate-500 hover:bg-primary/50 transition-all duration-300 hover:shadow-lg bg-slate-500 text-white"
+     className="py-2 px-2 w-full border-2 border-slate-500 hover:bg-primary/50 transition-all duration-300 hover:shadow-lg bg-slate-500 text-white rounded-lg"
     >
      Signup
     </button>

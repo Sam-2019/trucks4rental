@@ -27,9 +27,6 @@ const Search = ({ nextStep, prevStep }) => {
     console.log({ data });
     nextStep();
   };
-  //  console.log({ phone: watch("contactPhone") });
-  //  console.log({ email: watch("contactEmail") });
-  //  console.log({ whatsapp: watch("contactWhatsapp") });
 
   function handleNextStep() {
     nextStep();
@@ -45,13 +42,15 @@ const Search = ({ nextStep, prevStep }) => {
         <div className="flex flex-col md:flex-col w-full gap-4 pb-2 md:px-6 md:py-8 bg-gray-200 rounded-lg">
           <div className="flex flex-col md:flex-row w-full gap-4 pb-2 md:pb-0">
             <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName" className="text-sm font-medium">
+                First Name
+              </label>
               <input
                 id="firstName"
                 type="firstName"
                 {...register("firstName", { required: true })}
                 className="
-     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg
+     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium
      border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
      "
               />
@@ -61,13 +60,15 @@ const Search = ({ nextStep, prevStep }) => {
             </div>
 
             <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="lastName">Last Name</label>
+              <label htmlFor="lastName" className="text-sm font-medium">
+                Last Name
+              </label>
               <input
                 id="lastName"
                 type="lastName"
                 {...register("lastName", { required: true })}
                 className="
-     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg
+     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium
      border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
      "
               />
@@ -77,13 +78,15 @@ const Search = ({ nextStep, prevStep }) => {
 
           <div className="flex flex-col md:flex-row w-full gap-4 pb-2 md:pb-0">
             <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className="text-sm font-medium">
+                Email
+              </label>
               <input
                 id="email"
                 type="email"
                 {...register("email", { required: true })}
                 className="
-     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg
+     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium
      border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
      "
               />
@@ -91,13 +94,15 @@ const Search = ({ nextStep, prevStep }) => {
             </div>
 
             <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="phoneNumber">Phone Number</label>
+              <label htmlFor="phoneNumber" className="text-sm font-medium">
+                Phone Number
+              </label>
               <input
                 id="phoneNumber"
                 type="phoneNumber"
                 {...register("phoneNumber", { required: true })}
                 className="
-     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg
+     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium
      border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
      "
               />
@@ -108,13 +113,15 @@ const Search = ({ nextStep, prevStep }) => {
           </div>
 
           <div className="flex flex-col gap-2 w-full">
-            <label htmlFor="companyName">Company Name</label>
+            <label htmlFor="companyName" className="text-sm font-medium">
+              Company Name
+            </label>
             <input
               id="companyName"
               type="companyName"
               {...register("companyName", { required: true })}
               className="
-     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg
+     py-2 px-2 w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium
      border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none
      "
             />
@@ -124,12 +131,14 @@ const Search = ({ nextStep, prevStep }) => {
           </div>
 
           <div className="flex flex-col gap-2 w-full">
-            <label htmlFor="contact">How can we contact you?</label>
+            <label htmlFor="contact" className="text-sm font-medium">
+              How can we contact you?
+            </label>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <button
                 type="button"
                 className="
-      flex w-full items-center p-1 transition-all bg-white rounded-lg py-2  
+      flex w-full items-center p-1 transition-all bg-white rounded-lg text-sm font-medium py-2  
       hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 
       border-1 border-slate-200 hover:border-slate-300 focus:border-slate-200 focus:outline-none
       "
@@ -140,13 +149,13 @@ const Search = ({ nextStep, prevStep }) => {
                 >
                   <div className="inline-flex items-center">
                     <label
-                      className="flex items-center cursor-pointer relative"
+                      className="flex items-center cursor-pointer relative text-sm font-medium"
                       htmlFor="contactPhone"
                     >
                       <input
                         {...register("contactPhone")}
                         type="checkbox"
-                        className="peer h-5 w-5 cursor-pointer transition-all bg-white rounded-lg appearance-none border border-gray-300 checked:bg-gray-500 checked:border-gray-500"
+                        className="peer h-5 w-5 cursor-pointer transition-all bg-white rounded-lg text-sm font-medium appearance-none border border-gray-300 checked:bg-gray-500 checked:border-gray-500"
                         id="contactPhone"
                       />
                       <span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -181,14 +190,14 @@ const Search = ({ nextStep, prevStep }) => {
               <button
                 type="button"
                 className="
-      flex w-full items-center p-1 transition-all bg-white rounded-lg py-2  
+      flex w-full items-center p-1 transition-all bg-white rounded-lg text-sm font-medium py-2  
       hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 
       border-1 border-slate-200 hover:border-slate-300 focus:border-slate-200 focus:outline-none
       "
               >
                 <label
                   htmlFor="contactWhatsapp"
-                  className="flex w-full cursor-pointer items-center px-3 py-2"
+                  className="flex w-full cursor-pointer items-center px-3 py-2 text-sm font-medium"
                 >
                   <div className="inline-flex items-center">
                     <label
@@ -198,7 +207,7 @@ const Search = ({ nextStep, prevStep }) => {
                       <input
                         {...register("contactWhatsapp")}
                         type="checkbox"
-                        className="peer h-5 w-5 cursor-pointer transition-all bg-white rounded-lg appearance-none border border-gray-300 checked:bg-gray-500 checked:border-gray-500"
+                        className="peer h-5 w-5 cursor-pointer transition-all bg-white rounded-lg text-sm font-medium appearance-none border border-gray-300 checked:bg-gray-500 checked:border-gray-500"
                         id="contactWhatsapp"
                       />
                       <span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -220,7 +229,7 @@ const Search = ({ nextStep, prevStep }) => {
                       </span>
                     </label>
                     <label
-                      className="cursor-pointer ml-2 text-slate-600 text-sm flex flex-row items-center gap-2"
+                      className="cursor-pointer ml-2 text-slate-600 flex flex-row items-center gap-2 text-sm font-medium"
                       htmlFor="contactWhatsapp"
                     >
                       <img src={whatappSvg} alt="whatsapp" width="19" />
@@ -233,7 +242,7 @@ const Search = ({ nextStep, prevStep }) => {
               <button
                 type="button"
                 className="
-      flex w-full items-center p-1 transition-all bg-white rounded-lg py-2  
+      flex w-full items-center p-1 transition-all bg-white rounded-lg text-sm font-medium py-2  
       hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 
       border-1 border-slate-200 hover:border-slate-300 focus:border-slate-200 focus:outline-none
       "
@@ -244,13 +253,13 @@ const Search = ({ nextStep, prevStep }) => {
                 >
                   <div className="inline-flex items-center">
                     <label
-                      className="flex items-center cursor-pointer relative"
+                      className="flex items-center cursor-pointer relative text-sm font-medium"
                       htmlFor="contactEmail"
                     >
                       <input
                         {...register("contactEmail")}
                         type="checkbox"
-                        className="peer h-5 w-5 cursor-pointer transition-all bg-white rounded-lg appearance-none border border-gray-300 checked:bg-gray-500 checked:border-gray-500"
+                        className="peer h-5 w-5 cursor-pointer transition-all bg-white rounded-lg text-sm font-medium appearance-none border border-gray-300 checked:bg-gray-500 checked:border-gray-500"
                         id="contactEmail"
                       />
                       <span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -272,7 +281,7 @@ const Search = ({ nextStep, prevStep }) => {
                       </span>
                     </label>
                     <label
-                      className="cursor-pointer ml-2 text-slate-600 text-sm flex flex-row items-center gap-2"
+                      className="cursor-pointer ml-2 text-slate-600 flex flex-row items-center gap-2 text-sm font-medium"
                       htmlFor="contactEmail"
                     >
                       <Mail size={20} />
