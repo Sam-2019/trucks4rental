@@ -99,6 +99,8 @@ export function CarouselTransition({ images = defaultImages }) {
     showBullets={false}
     lazyLoad={true}
     showNav={true}
+    showThumbnails={true}
+ 
    />
   </NavLink>
  );

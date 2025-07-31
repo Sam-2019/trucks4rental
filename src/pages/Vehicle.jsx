@@ -16,14 +16,24 @@ import { NavLink, useLoaderData } from "react-router";
 import { CarouselTransition } from "../components/carousel/carouselTransition";
 import InspectionReport from "../components/inspectionReport";
 import SuggestedTrucks from "../components/suggestedTrucks";
-
+import { useState } from "react";
 import { comparable_trucks } from "../lib/utils";
+import LeaseModal from "../components/leaseModal";
 
 const comparable = "Comparable vehicles";
 
 export default function Vehicle() {
   const { vehicle } = useLoaderData();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const onClose = () => {
+    setIsModalOpen(false);
+  };
+
+  const onOpen = () => {
+    setIsModalOpen(true);
+  };
 
   return (
     <div className="flex flex-row place-content-center text-gray-700">
@@ -45,6 +55,7 @@ export default function Vehicle() {
         <div className="flex flex-row place-content-center space-x-5">
           <div className="w-1/2 text-gray-700 space-y-6">
             <CarouselTransition images={vehicle.images} />
+            
 
             <div className="space-y-6 p-9 rounded-3xl bg-gray-200">
               <p className=" text-2xl font-semibold">
@@ -88,7 +99,15 @@ export default function Vehicle() {
           </div>
 
           <div className="flex-col w-1/2 space-y-5">
-            <div className="p-7 rounded-3xl bg-gray-200 space-y-7">
+            <button
+              type="button"
+              className="w-full px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
+              onClick={() => onOpen()}
+            >
+              Lease
+            </button>
+
+            {/* <div className="p-7 rounded-3xl bg-gray-200 space-y-7">
               <div className="flex flex-row justify-between items-center">
                 <p className="text-2xl font-semibold">Purchase price</p>
                 <p className="text-2xl font-medium">
@@ -115,7 +134,7 @@ export default function Vehicle() {
                 <Calculator size={23} className="mr-2" />
                 <p className="text-sm"> Calculate shipping</p>
               </NavLink>
-            </div>
+            </div> */}
 
             <div className="p-7 rounded-3xl bg-gray-200 space-y-3">
               <div className="flex flex-row justify-between items-center">
@@ -126,7 +145,7 @@ export default function Vehicle() {
                 </div>
               </div>
 
-              <p className="text-sm">Specifications</p>
+              {/* <p className="text-sm">Specifications</p> */}
 
               {vehicle.matriculationYear && (
                 <div className="grid grid-cols-2 gap-4">
@@ -156,7 +175,7 @@ export default function Vehicle() {
                 </div>
               </div>
             </div>
-
+            {/* 
             <div className="flex flex-row px-7">
               <NavLink to="#" className="flex flex-row items-center w-55">
                 <p>View all specifications</p>
@@ -167,7 +186,7 @@ export default function Vehicle() {
                 <p>View the inspection report</p>
                 <ChevronRight size={23} />
               </NavLink>
-            </div>
+            </div> */}
 
             <div className="border-1 border-gray-300 p-9 rounded-3xl space-y-3">
               <p className="text-2xl font-semibold">
@@ -206,6 +225,8 @@ export default function Vehicle() {
             </div>
           </div>
         </div>
+
+        <LeaseModal open={isModalOpen} onClose={onClose} />
 
         <InspectionReport />
 
