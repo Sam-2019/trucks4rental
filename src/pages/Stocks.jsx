@@ -101,10 +101,10 @@ export default function Stocks() {
 
               return (
                 <div className="space-y-3" key={header.key}>
-                  <p className="w-60 text-sm font-medium">
-                    {header.name}
-                    <div className="my-1 border-t border-slate-300" />
-                  </p>
+                  <div>
+                    <p className="w-60 text-sm font-medium">{header.name}</p>
+                    <div className="my-1 border-t border-slate-300 w-50" />
+                  </div>
 
                   {/* <CheckBox data={itemsToShow} handleCheckboxChange={handleCheckboxChange} checkState={checkedItems} /> */}
 

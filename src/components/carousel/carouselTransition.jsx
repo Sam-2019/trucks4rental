@@ -55,7 +55,7 @@ const authImages = [
 ];
 
 export function MainCarouselTransition({ images, url }) {
- //  console.log({ url });
+//   console.log({ images });
  return (
   <NavLink>
    <ImageGallery

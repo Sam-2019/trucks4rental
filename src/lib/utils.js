@@ -1903,7 +1903,7 @@ export const recommended_trucks = [
     new: false,
     name: "MERCEDES-BENZ ACTROS 1845 LS",
     number: "318678",
-    mileage: " 845,863 km",
+    mileage: "845,863 km",
     gearbox: "Automatic",
     price: "17,900",
     matriculation_year: "2016-6",
@@ -1920,26 +1920,32 @@ export const recommended_trucks = [
         id: 0,
         source:
           "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 1,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 2,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
@@ -1947,7 +1953,7 @@ export const recommended_trucks = [
   },
   {
     id: 1,
-    new: true,
+    new: false,
     name: "VOLVO FH 650 XL 6X2 ADR ALCOA'S",
     number: "318824",
     mileage: "907,215 km",
@@ -1961,32 +1967,38 @@ export const recommended_trucks = [
     suspension_type: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
+    url: "/stocks/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
       {
         id: 0,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 1,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 2,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
@@ -1994,7 +2006,7 @@ export const recommended_trucks = [
   },
   {
     id: 2,
-    new: false,
+    new: true,
     name: "MAGYAR SR 34 Ibex-Gardner Denver",
     number: "318200",
     mileage: "",
@@ -2008,32 +2020,38 @@ export const recommended_trucks = [
     suspension_type: "full air suspension",
     type: "semi_trailer",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
+    url: "/stocks/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
       {
         id: 0,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 1,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 2,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
@@ -2064,26 +2082,32 @@ export const comparable_trucks = [
         id: 0,
         source:
           "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 1,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 2,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
@@ -2110,27 +2134,33 @@ export const comparable_trucks = [
       {
         id: 0,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 1,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 2,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318824/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
@@ -2157,74 +2187,33 @@ export const comparable_trucks = [
       {
         id: 0,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 1,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
       {
         id: 2,
         source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
-        originalClass: "featured-slide",
-        thumbnailClass: "featured-thumb",
-      },
-    ],
-  },
-  {
-    id: 3,
-    new: false,
-    name: "MAGYAR SR 34",
-    number: "318200",
-    mileage: "",
-    gearbox: "",
-    price: "25,900",
-    matriculation_year: "1997-1",
-    currency: "Ghc",
-    tax_inclusive: false,
-    configuration: "configuration",
-    number_of_axles: "3Axles",
-    suspension_type: "full air suspension",
-    type: "semi_trailer",
-    currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318200/MAGYARSR34",
-    images: [
-      {
-        id: 0,
-        source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hlv/600.jpg",
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
-        originalClass: "featured-slide",
-        thumbnailClass: "featured-thumb",
-      },
-      {
-        id: 1,
-        source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
-        originalClass: "featured-slide",
-        thumbnailClass: "featured-thumb",
-      },
-      {
-        id: 2,
-        source:
-          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318678/hrv/600.jpg",
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        original:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
+        thumbnail:
+          "https://d2e5b8shawuel2.cloudfront.net/vehicle/318200/hlv/600.jpg",
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
       },
