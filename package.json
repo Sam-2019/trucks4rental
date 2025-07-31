@@ -27,6 +27,7 @@
 		"i": "^0.3.7",
 		"lucide-react": "^0.511.0",
 		"react": "^19.1.0",
+		"react-country-region-selector": "^4.0.2",
 		"react-dom": "^19.1.0",
 		"react-hook-form": "^7.59.0",
 		"react-image-gallery": "^1.4.0",
