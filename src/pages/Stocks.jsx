@@ -169,7 +169,7 @@ export default function Stocks() {
                 {displayNames.map((item) => (
                   <div
                     key={item.key}
-                    className="flex flex-row items-center bg-slate-200 rounded-lg py-2 px-3 hover:text-blue-600"
+                    className="flex flex-row items-center bg-slate-200 rounded-lg py-2 px-3 hover:text-amber-600"
                   >
                     <p className="w-auto mr-2">{item.key}</p>
                     <span>

@@ -4,8 +4,8 @@ import { MainCarouselTransition } from "./carousel/carouselTransition";
 
 export default function SuggestedTrucks({ header, trucks = recommended_trucks }) {
  return (
-  <div className="items-center py-10">
-   <h2 className="text-2xl font-bold text-blue-900 py-5">{header}</h2>
+  <div className="items-center">
+   <h2 className="text-2xl font-bold text-slate-500 py-5">{header}</h2>
 
    <div className="flex flex-col md:flex-row gap-x-10 gap-7">
     {trucks.map((vehicle, index) => (
@@ -18,8 +18,8 @@ export default function SuggestedTrucks({ header, trucks = recommended_trucks })
        {/* Truck Image */}
 
        {vehicle.new && (
-        <div className="vehicle-card__ribbon bg-blue-800">
-         <div className=" text-white text-xs font-bold">New</div>
+        <div className="vehicle-card__ribbon bg-amber-600">
+         <div className="text-white text-xs font-bold">New</div>
         </div>
        )}
 

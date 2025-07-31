@@ -13,6 +13,9 @@ import tipper from "../assets/icons/tipper.png";
 import trailer from "../assets/icons/trailer.png";
 import truck from "../assets/icons/truck.png";
 
+import mixer from "../assets/icons/mixer.png";
+import loading_box from "../assets/icons/loading_box.png";
+
 export const numberFormat = new Intl.NumberFormat("en-US");
 
 export const officeGMAP =
@@ -31,7 +34,7 @@ export const mobileItems = [
 export const authSchema = yup
   .object({
     email: yup.string().required("Email is required"),
-    password: yup.string().required("EmPassword is required"),
+    password: yup.string().required("Password is required"),
   })
   .required();
 
@@ -140,7 +143,8 @@ export const truckTypes = [
     name: "Tipper",
     otherName: "Tipper",
     file: tipper,
-    padding_y: 5,
+    padding_y: 2,
+    width: "100%",
     route: "/stocks?kind-tipper=true",
   },
   {
@@ -148,7 +152,8 @@ export const truckTypes = [
     name: "Semi Trailer",
     otherName: "Semi-trailer",
     file: semi_trailer,
-    padding_y: 5,
+    padding_y: 6,
+    width: "100%",
     route: "/stocks?kind-semitrailer=true",
   },
   {
@@ -157,6 +162,7 @@ export const truckTypes = [
     otherName: "Truck",
     file: truck,
     padding_y: 5,
+    width: "100%",
     route: "/stocks?kind-truck=true",
   },
   {
@@ -165,6 +171,7 @@ export const truckTypes = [
     otherName: "Trailer",
     file: trailer,
     padding_y: 5,
+    width: "80%",
     route: "/stocks?kind-trailer=true",
   },
   {
@@ -172,8 +179,27 @@ export const truckTypes = [
     name: "Tractor",
     otherName: "Tractor",
     file: tractor_unit,
-    padding_y: 1,
+    padding_y: 3,
+    width: "79%",
     route: "/stocks?kind-tractorunit=true",
+  },
+  {
+    id: 5,
+    name: "Mixer",
+    otherName: "Mixer",
+    file: mixer,
+    padding_y: 5,
+    width: "100%",
+    route: "/stocks?kind-mixer=true",
+  },
+  {
+    id: 6,
+    name: "Loading Box",
+    otherName: "Loading Box",
+    file: loading_box,
+    padding_y: 6,
+    width: "100%",
+    route: "/stocks?kind-loadingbox=true",
   },
 ];
 

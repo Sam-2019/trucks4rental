@@ -61,7 +61,7 @@ export function LoginForm() {
 
     <button
      type="submit"
-     className="py-2 px-2 w-full border-2 border-slate-500 hover:bg-primary/50 transition-all duration-300 hover:shadow-lg bg-slate-500 text-white rounded-lg"
+     className="py-2 px-2 w-full bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
     >
      Login
     </button>

@@ -159,7 +159,7 @@ function TruckCardMobileNew({ vehicle }) {
       {/* Truck Image */}
 
       {vehicle.new && (
-        <div className="vehicle-card__ribbon bg-blue-800">
+        <div className="vehicle-card__ribbon bg-amber-600">
           <div className=" text-white text-xs font-bold">New</div>
         </div>
       )}
