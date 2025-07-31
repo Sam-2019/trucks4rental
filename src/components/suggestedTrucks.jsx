@@ -38,10 +38,10 @@ export default function SuggestedTrucks({ header, trucks = recommended_trucks })
            </>
           )}
 
-          {vehicle.matriculation_year && (
+          {vehicle.matriculationYear && (
            <>
             <p className="text-sm">Matriculation year:</p>
-            <p className="text-sm text-right">{vehicle.matriculation_year}</p>
+            <p className="text-sm text-right">{vehicle.matriculationYear}</p>
            </>
           )}
 
@@ -59,17 +59,17 @@ export default function SuggestedTrucks({ header, trucks = recommended_trucks })
            </>
           )}
 
-          {vehicle.number_of_axles && (
+          {vehicle.axlesCount && (
            <>
             <p className="text-sm">Number of axles:</p>
-            <p className="text-sm text-right">{vehicle.number_of_axles}</p>
+            <p className="text-sm text-right">{vehicle.axlesCount}</p>
            </>
           )}
 
-          {vehicle.suspension_type && (
+          {vehicle.suspensionType && (
            <>
             <p className="text-sm">Suspension type:</p>
-            <p className="text-sm text-right">{vehicle.suspension_type}</p>
+            <p className="text-sm text-right">{vehicle.suspensionType}</p>
            </>
           )}
 

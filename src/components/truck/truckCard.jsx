@@ -6,11 +6,13 @@ import { SubCarouselTransition } from "../carousel/carouselTransition";
 import { MainCarouselTransition } from "../carousel/carouselTransition";
 
 function TruckCard({ vehicle }) {
+  console.log({vehicle})
   const [fill, setFill] = useState(false);
 
   const toggleFill = () => {
     setFill(!fill);
   };
+
   return (
     <div className="flex flex-row justify-between items-center gap-4">
       <SubCarouselTransition images={vehicle.images} url={vehicle.url} />
@@ -30,49 +32,75 @@ function TruckCard({ vehicle }) {
         </div>
 
         <div className="grid grid-col-1 md:grid-cols-2 gap-3 mt-5">
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Technical condition</span>
-            <span>02</span>
-          </p>
+          {vehicle.technicalCondition && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Technical condition</span>
+              <span>{vehicle.technicalCondition}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>No.</span>
-            <span>04</span>
-          </p>
+          {vehicle.number && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>No.</span>
+              <span>{vehicle.number}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Kind</span>
-            <span>06</span>
-          </p>
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Specification</span>
-            <span>08</span>
-          </p>
+          {vehicle.kind && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Kind</span>
+              <span>{vehicle.kind}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Matriculation year</span>
-            <span>10</span>
-          </p>
+          {vehicle.specification && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Specification</span>
+              <span>{vehicle.specification}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Number of axles</span>
-            <span>12</span>
-          </p>
+          {vehicle.matriculationYear && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Matriculation year</span>
+              <span>{vehicle.matriculationYear}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Suspension type</span>
-            <span>14</span>
-          </p>
+          {vehicle.specification && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Specification</span>
+              <span>{vehicle.specification}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Gearbox</span>
-            <span>16</span>
-          </p>
+          {vehicle.axlesCount && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Number of axles</span>
+              <span>{vehicle.axlesCount}</span>
+            </p>
+          )}
 
-          <p className="text-sm flex flex-row justify-between items-center">
-            <span>Engine capacity</span>
-            <span>18</span>
-          </p>
+          {vehicle.suspensionType && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Suspension Type</span>
+              <span>{vehicle.suspensionType}</span>
+            </p>
+          )}
+
+          {vehicle.gearbox && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Gearbox</span>
+              <span>{vehicle.gearbox}</span>
+            </p>
+          )}
+
+          {vehicle.engineCapacity && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Engine Capacity</span>
+              <span>{vehicle.engineCapacity}</span>
+            </p>
+          )}
         </div>
 
         <div className="my-5 border-t border-gray-300" />
@@ -154,11 +182,11 @@ function TruckCardMobileNew({ vehicle }) {
               </>
             )}
 
-            {vehicle.matriculation_year && (
+            {vehicle.matriculationYear && (
               <>
                 <span>Matriculation year:</span>
                 <p className="text-sm text-right">
-                  {vehicle.matriculation_year}
+                  {vehicle.matriculationYear}
                 </p>
               </>
             )}
@@ -177,17 +205,17 @@ function TruckCardMobileNew({ vehicle }) {
               </>
             )}
 
-            {vehicle.number_of_axles && (
+            {vehicle.axlesCount && (
               <>
                 <span>Number of axles:</span>
-                <p className="text-sm text-right">{vehicle.number_of_axles}</p>
+                <p className="text-sm text-right">{vehicle.axlesCount}</p>
               </>
             )}
 
-            {vehicle.suspension_type && (
+            {vehicle.suspensionType && (
               <>
                 <span>Suspension type:</span>
-                <p className="text-sm text-right">{vehicle.suspension_type}</p>
+                <p className="text-sm text-right">{vehicle.suspensionType}</p>
               </>
             )}
 

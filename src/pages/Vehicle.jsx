@@ -9,13 +9,10 @@ import {
   Mail,
   Check,
 } from "lucide-react";
-
 import whatappSvg from "@/assets/svgs/whatsapp.svg";
 import Ratings from "@/components/ui/ratings";
 import { Button } from "@/components/ui/button";
-
 import { NavLink, useLoaderData } from "react-router";
-
 import { CarouselTransition } from "../components/carousel/carouselTransition";
 import InspectionReport from "../components/inspectionReport";
 import SuggestedTrucks from "../components/suggestedTrucks";
@@ -51,7 +48,7 @@ export default function Vehicle() {
 
             <div className="space-y-6 p-9 rounded-3xl bg-gray-200">
               <p className=" text-2xl font-semibold">
-                Kleyn Trucks provides assurances you can rely on
+                We provide assurances you can rely on
               </p>
 
               <ul className="space-y-6">
@@ -124,21 +121,33 @@ export default function Vehicle() {
               <div className="flex flex-row justify-between items-center">
                 <p className="text-2xl font-semibold">Vehicle specifications</p>
                 <div className="text-2xl font-semibold">
-                  No. <span className="text-xs font-normal">319367</span>
+                  No.{" "}
+                  <span className="text-xs font-normal">{vehicle.number}</span>
                 </div>
               </div>
 
               <p className="text-sm">Specifications</p>
 
-              <div className="grid grid-cols-2 gap-4">
-                <p className="text-sm">Matriculation year</p>
-                <p className="text-sm">2016-4</p>
-              </div>
+              {vehicle.matriculationYear && (
+                <div className="grid grid-cols-2 gap-4">
+                  <span className="text-sm">Matriculation year:</span>
+                  <p className="text-sm ">{vehicle.matriculationYear}</p>
+                </div>
+              )}
 
-              <div className="grid grid-cols-2 gap-4">
-                <p className="text-sm">Mileage</p>
-                <p className="text-sm">Buy this vehicle</p>
-              </div>
+              {vehicle.mileage && (
+                <div className="grid grid-cols-2 gap-4">
+                  <span className="text-sm">Mileage:</span>
+                  <p className="text-sm ">{vehicle.mileage}</p>
+                </div>
+              )}
+
+              {vehicle.configuration && (
+                <div className="grid grid-cols-2 gap-4">
+                  <span className="text-sm">Configuration:</span>
+                  <p className="text-sm ">{vehicle.configuration}</p>
+                </div>
+              )}
 
               <div className="grid grid-cols-2 gap-4">
                 <p className="text-sm">Technical condition</p>
