@@ -23,7 +23,7 @@ const comparable = "Comparable vehicles";
 
 export default function Vehicle() {
   const { vehicle } = useLoaderData();
-  console.log(vehicle);
+
 
   return (
     <div className="flex flex-row place-content-center text-gray-700">

@@ -6,7 +6,7 @@ import { SubCarouselTransition } from "../carousel/carouselTransition";
 import { MainCarouselTransition } from "../carousel/carouselTransition";
 
 function TruckCard({ vehicle }) {
-  console.log({vehicle})
+ 
   const [fill, setFill] = useState(false);
 
   const toggleFill = () => {
