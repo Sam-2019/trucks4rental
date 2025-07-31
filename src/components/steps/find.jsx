@@ -54,9 +54,9 @@ export default function Find({ onClose }) {
         <button
           type="button"
           onClick={onClose}
-          className="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300"
+          className="px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
         >
-          Close this screen
+          Close
         </button>
       </div>
     </div>

@@ -299,13 +299,13 @@ const Search = ({ nextStep, prevStep }) => {
           <button
             type="button"
             onClick={() => handlePrevStep()}
-            className="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300"
+            className="px-8 py-3 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
           >
             Previous
           </button>
           <input
             type="submit"
-            className="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300"
+            className="px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
           />
         </div>
       </form>

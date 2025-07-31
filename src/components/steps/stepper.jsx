@@ -54,7 +54,7 @@ const Stepper = ({ onClose }) => {
                 className={`w-10 h-10 flex items-center justify-center rounded-full font-bold
               ${
                 step.index === currentStep
-                  ? "bg-slate-500 text-white"
+                  ? "bg-amber-600 text-white"
                   : "bg-gray-300 text-gray-700"
               }`}
               >

@@ -332,7 +332,7 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
             </div>
             <div className="flex flex-row w-full items-center space-x-4">
               <p className="py-2 px-2 items-center p-1 transition-all bg-white rounded-lg border-1 border-slate-300 w-20 md:w-50 text-center text-sm font-medium">
-                 {numberFormat.format(mileages[0])}
+                {numberFormat.format(mileages[0])}
               </p>
               <div className="w-full md:w-full">
                 <DualRangeSlider
@@ -345,7 +345,7 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
                 />
               </div>
               <p className="py-2 px-2 items-center p-1 transition-all bg-white rounded-lg border-1 border-slate-300 w-20 md:w-50 text-center text-sm font-medium">
-                 {numberFormat.format(mileages[1])}
+                {numberFormat.format(mileages[1])}
               </p>
             </div>
           </div>
@@ -391,14 +391,14 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
         <button
           type="button"
           onClick={() => editSelectedTruck()}
-          className="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300"
+          className="px-8 py-3 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
         >
           Previous
         </button>
 
         <input
           type="submit"
-          className="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300"
+          className="px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
         />
       </div>
     </form>
