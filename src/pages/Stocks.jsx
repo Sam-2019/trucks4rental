@@ -3,15 +3,17 @@ import { useLocation, useSearchParams } from "react-router";
 import { ChevronsDown, ChevronsUp, Trash2, X } from "lucide-react";
 import { TruckCard, TruckCardMobileNew } from "../components/truck/truckCard";
 import {
-  headers as headersData,
   domain,
-  siteName,
-  getDisplayNamesFromSearchParams,
   stocks,
+  siteName,
+  headers as headersData,
+  getDisplayNamesFromSearchParams,
+  sortStocks,
 } from "../lib/utils";
 
 export default function Stocks() {
   const location = useLocation();
+  const [inventory, setInventory] = useState(stocks);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const searchQuery = location.search;
@@ -63,6 +65,12 @@ export default function Stocks() {
   const handleClear = () => {
     setSearchParams([]);
     setCheckedItems(() => ({}));
+  };
+
+  const sortInventory = (value) => {
+    if(value === "default-sorting") return setInventory(stocks);
+    const sortitems = sortStocks(inventory, value);
+    setInventory(sortitems);
   };
 
   return (
@@ -196,15 +204,20 @@ export default function Stocks() {
           )}
 
           <div className="flex flex-row justify-between w-full max-w-6xl items-center py-6">
-            <p>856 Items in selection</p>
+            <p>{inventory.length} Items in selection</p>
             <select
-              className="border-1 border-gray-300 p-2 w-40 rounded-lg bg-white focus:outline-none"
+              className="border-1 border-gray-300 p-2 w-45 rounded-lg bg-white focus:outline-none"
               defaultValue="default-sorting"
+              onChange={(e) => sortInventory(e.target.value)}
             >
               <option value="price-asc">Price ˄</option>
               <option value="price-desc">Price ˅</option>
-              <option value="matriculation-asc">Matriculation year ˄</option>
-              <option value="matriculation-desc">Matriculation year ˅</option>
+              <option value="matriculationYear-asc">
+                Matriculation year ˄
+              </option>
+              <option value="matriculationYear-desc">
+                Matriculation year ˅
+              </option>
               <option value="km-asc">KM ascending </option>
               <option value="km-desc">KM descending </option>
               <option value="default-sorting" defaultValue>
@@ -214,7 +227,7 @@ export default function Stocks() {
           </div>
 
           <div className="space-y-5">
-            {stocks.map((vehicle) => (
+            {inventory.map((vehicle) => (
               <div key={vehicle.id}>
                 <TruckCard vehicle={vehicle} />
               </div>
@@ -223,7 +236,7 @@ export default function Stocks() {
         </div>
 
         <div className="flex flex-col w-full max-w-6xl space-y-8 rounded-lg md:hidden">
-          {stocks.map((vehicle) => (
+          {inventory.map((vehicle) => (
             <div key={vehicle.id}>
               <TruckCardMobileNew vehicle={vehicle} />
             </div>

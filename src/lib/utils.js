@@ -2581,3 +2581,62 @@ export const emissionStandard = [
     value: "6",
   },
 ];
+
+/**
+ * Sorts an array of stock objects based on a specified criteria.
+ *
+ * @param {Array<Object>} stocks - The array of stock objects to sort.
+ * @param {string} sortOption - The sorting criteria.
+ * - 'price asc': Sort by price in ascending order.
+ * - 'price desc': Sort by price in descending order.
+ * - 'matriculationYear asc': Sort by matriculationYear in ascending order.
+ * - 'matriculationYear desc': Sort by matriculationYear in descending order.
+ * @returns {Array<Object>} A new array containing the sorted stock objects.
+ */
+export function sortStocks(stocks, sortOption) {
+  // Create a copy of the array to avoid mutating the original array.
+  const sortedStocks = [...stocks];
+
+  // Use a switch statement to handle different sorting options.
+  switch (sortOption) {
+    case "price-asc":
+      // Sort by price in ascending order.
+      // We need to convert the price string to a number by removing the comma.
+      sortedStocks.sort((a, b) => {
+        const priceA = parseFloat(a.price.replace(",", ""));
+        const priceB = parseFloat(b.price.replace(",", ""));
+        return priceA - priceB;
+      });
+      break;
+    case "price-desc":
+      // Sort by price in descending order.
+      // We need to convert the price string to a number by removing the comma.
+      sortedStocks.sort((a, b) => {
+        const priceA = parseFloat(a.price.replace(",", ""));
+        const priceB = parseFloat(b.price.replace(",", ""));
+        return priceB - priceA;
+      });
+      break;
+    case "matriculationYear-asc":
+      // Sort by matriculation year in ascending order.
+      // The 'YYYY-M' format can be compared as a string.
+      sortedStocks.sort((a, b) =>
+        a.matriculationYear.localeCompare(b.matriculationYear)
+      );
+      break;
+    case "matriculationYear-desc":
+      // Sort by matriculation year in descending order.
+      // The 'YYYY-M' format can be compared as a string, but we need to reverse the comparison.
+      sortedStocks.sort((a, b) =>
+        b.matriculationYear.localeCompare(a.matriculationYear)
+      );
+      break;
+    default:
+      console.warn(
+        `Unknown sort option: ${sortOption}. Returning unsorted stocks.`
+      );
+      break;
+  }
+
+  return sortedStocks;
+}
