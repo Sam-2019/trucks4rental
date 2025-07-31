@@ -49,7 +49,7 @@ export default function Header() {
       <div className="w-full bg-white shadow px-6 ">
         {/* Non-mobile */}
         <div className="hidden lg:block">
-          <div className="mx-auto flex items-center justify-between border-2 border-red-500">
+          <div className="mx-auto flex items-center justify-between">
             <Logo width={80} />
 
             <div className="w-98">
@@ -90,7 +90,7 @@ export default function Header() {
             >
               <SheetHeader>
                 <SheetDescription>
-                  <div className="flex flex-col items-start border-2 border-red-500">
+                  <div className="flex flex-col items-start">
                     {mobileItems.map((item) => (
                       <Button
                         key={item.index}
