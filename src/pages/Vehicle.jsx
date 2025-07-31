@@ -18,7 +18,7 @@ import InspectionReport from "../components/inspectionReport";
 import SuggestedTrucks from "../components/suggestedTrucks";
 import { useState } from "react";
 import { comparable_trucks } from "../lib/utils";
-import LeaseModal from "../components/leaseModal";
+import LeaseModal from "../components/lease";
 
 const comparable = "Comparable vehicles";
 

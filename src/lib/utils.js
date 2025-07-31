@@ -80,10 +80,39 @@ export const truckInfo = yup
   })
   .required();
 
-export const defaultPlaceholder = "m@example.com";
+export const localRequest = yup
+  .object({
+    materialType: yup.string().required("Required"),
+    pickup: yup.string().required("Required"),
+    pickupLandmark: yup.string().required("Required"),
+    destination: yup.string().required("Required"),
+    destinationLandmark: yup.string().required("Required"),
+    truckType: yup.string().required("Required"),
+    truckId: yup.string().required("Required"),
+    name: yup.string().required("Required"),
+    contact: yup.string().required("Required"),
+    email: yup.string().required("Required"),
+  })
+  .required();
+
+export const foreignRequest = yup
+  .object({
+    materialType: yup.string().required("Required"),
+    pickup: yup.string().required("Required"),
+    pickupLandmark: yup.string().required("Required"),
+    destination: yup.string().required("Required"),
+    destinationLandmark: yup.string().required("Required"),
+    truckType: yup.string().required("Required"),
+    truckId: yup.string().required("Required"),
+    name: yup.string().required("Required"),
+    contact: yup.string().required("Required"),
+    email: yup.string().required("Required"),
+  })
+  .required();
 
 export const siteName = "Trucks4Rental";
 export const domain = "Trucks4Rental.com";
+export const defaultPlaceholder = "m@example.com";
 
 export const getDisplayNamesFromSearchParams = (queryString, headersData) => {
   const displayNames = [];
@@ -2428,8 +2457,24 @@ export const defaultImages = [
   },
 ];
 
+export const materialTypes = [
+  { index: 0, value: "", label: "Select an option...", disabled: true },
+  {
+    index: 1,
+    label: "Contruction Materials",
+    value: "construction materials",
+    disabled: false,
+  },
+  { index: 2, label: "Raw Foods", value: "raw foods", disabled: false },
+  {
+    index: 3,
+    label: "Packaged Foods",
+    value: "packaged foods",
+    disabled: false,
+  },
+];
+
 export const blockCourtOptions = [
-  { value: "", label: "Select an option..." },
   { value: "Block-A", label: "Block-A" },
   { value: "Block-B", label: "Block-B" },
   { value: "Block-C", label: "Block-C" },
