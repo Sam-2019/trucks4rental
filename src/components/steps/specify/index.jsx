@@ -48,7 +48,7 @@ export default function Specify({ nextStep, onClose }) {
   return (
     <div>
       {!active && (
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 mb-6">
           {truckTypes.map((truckType) => (
             <button
               type="button"
@@ -58,72 +58,74 @@ export default function Specify({ nextStep, onClose }) {
                 setActve("form");
                 truckSelection(truckType?.id);
               }}
-              className="flex flex-row items-center hover:bg-gray-200 space-x-2 text-sm font-medium rounded-lg px-2 py-2 border-1 border-gray-200"
+              className="flex flex-row justify-center hover:bg-gray-200 space-x-2 rounded-lg py-2 md:py-3 border-1 border-gray-200"
             >
-              <img
-                src={truckType.file}
-                alt="Italian Trulli"
-                height={50}
-                className="w-25"
-              />
-              <p className="text-gray-600 leading-relaxed">{truckType.name}</p>
+              <div className="flex flex-col justify-center items-center space-y-2">
+                <img
+                  src={truckType.file}
+                  alt="Italian Trulli"
+                  className={`w-${truckType.semiWidth}`}
+                />
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  {truckType.name}
+                </p>
+              </div>
             </button>
           ))}
         </div>
       )}
 
-      <div>
-        {active === "form" && (
-          <div className="space-y-8">
+      {active === "form" && (
+        <div className="space-y-4 md:space-y-8">
+          <SelectedTruck
+            selectedTruck={selectedTruck}
+            truckTypes={truckTypes}
+            className="p-4 border-1 border-gray-200 rounded-lg"
+            edit={editSelectedTruck}
+          />
+
+          <SpecifyForm
+            onClose={onClose}
+            formData={formInfo}
+            editSelectedTruck={editSelectedTruck}
+          />
+        </div>
+      )}
+
+      {active === "preview" && (
+         <div className="space-y-4 md:space-y-8">
+          <div className="space-y-8 p-5 border-gray-200 bg-gray-200 rounded-lg">
             <SelectedTruck
               selectedTruck={selectedTruck}
               truckTypes={truckTypes}
-              className="p-5 border-1 border-gray-200 rounded-lg"
-              edit={editSelectedTruck}
+              edit={editForm}
             />
 
-            <SpecifyForm
-              onClose={onClose}
-              formData={formInfo}
-              editSelectedTruck={editSelectedTruck}
-            />
+            <div className="my-5 border-t border-gray-300" />
+            <SpecifyPreview formData={formData} />
           </div>
-        )}
-        {active === "preview" && (
-          <div className="space-y-8">
-            <div className="space-y-8 p-5 border-gray-200 bg-gray-200 rounded-lg">
-              <SelectedTruck
-                selectedTruck={selectedTruck}
-                truckTypes={truckTypes}
-                edit={editForm}
-              />
 
-              <div className="my-5 border-t border-gray-300" />
-              <SpecifyPreview formData={formData} />
-            </div>
+          <div className="flex flex-row justify-between mb-5">
+            <button
+              type="button"
+              onClick={() => editForm()}
+              className="px-8 py-3 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
+            >
+              Previous
+            </button>
 
-            <div className="flex flex-row justify-between mb-5">
+            {active && (
               <button
                 type="button"
-                onClick={() => editForm()}
-                   className="px-8 py-3 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
+                onClick={() => handleNextStep()}
+                className="px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
               >
-                Previous
+                Next
               </button>
-
-              {active && (
-                <button
-                  type="button"
-                  onClick={() => handleNextStep()}
-            className="px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
-                >
-                  Next
-                </button>
-              )}
-            </div>
+            )}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -131,19 +133,20 @@ export default function Specify({ nextStep, onClose }) {
 const SelectedTruck = ({ truckTypes, selectedTruck, edit, className }) => {
   return (
     <div className={`flex flex-row justify-between items-center ${className}`}>
-      <div className="flex flex-row items-center space-x-2">
-        <p>You are searching for a </p>
+      <div className="flex flex-col md:flex-row md:items-center space-x-2 space-y-2 w-full">
+        <p className> You are searching for a </p>
 
-        <img
-          src={truckTypes[selectedTruck]?.file}
-          alt="Italian Trulli"
-          className="w-13"
-        />
+        <div className="flex flex-row space-x-2 items-center">
+          <img
+            src={truckTypes[selectedTruck]?.file}
+            alt="Italian Trulli"
+            className="w-20 md:w-30"
+          />
 
-        <p className="text-sm font-medium">
-          {truckTypes[selectedTruck]?.otherName}
-        </p>
+          <p className>{truckTypes[selectedTruck]?.otherName}</p>
+        </div>
       </div>
+
       <p
         className="cursor-default underline underline-offset-8"
         onClick={() => edit()}

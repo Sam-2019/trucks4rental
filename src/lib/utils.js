@@ -173,7 +173,9 @@ export const truckTypes = [
     otherName: "Tipper",
     file: tipper,
     padding_y: 2,
+    height: "10",
     width: "100%",
+    semiWidth: "20",
     route: "/stocks?kind-tipper=true",
   },
   {
@@ -182,7 +184,9 @@ export const truckTypes = [
     otherName: "Semi-trailer",
     file: semi_trailer,
     padding_y: 6,
+    height: "10",
     width: "100%",
+    semiWidth: "20",
     route: "/stocks?kind-semitrailer=true",
   },
   {
@@ -191,7 +195,9 @@ export const truckTypes = [
     otherName: "Truck",
     file: truck,
     padding_y: 5,
+    height: "10",
     width: "100%",
+    semiWidth: "20",
     route: "/stocks?kind-truck=true",
   },
   {
@@ -200,7 +206,9 @@ export const truckTypes = [
     otherName: "Trailer",
     file: trailer,
     padding_y: 5,
+    height: "10",
     width: "80%",
+    semiWidth: "20",
     route: "/stocks?kind-trailer=true",
   },
   {
@@ -209,7 +217,9 @@ export const truckTypes = [
     otherName: "Tractor",
     file: tractor_unit,
     padding_y: 3,
+    height: "10",
     width: "79%",
+    semiWidth: "15",
     route: "/stocks?kind-tractorunit=true",
   },
   {
@@ -218,7 +228,9 @@ export const truckTypes = [
     otherName: "Mixer",
     file: mixer,
     padding_y: 5,
+    height: "10",
     width: "100%",
+    semiWidth: "20",
     route: "/stocks?kind-mixer=true",
   },
   {
@@ -227,7 +239,9 @@ export const truckTypes = [
     otherName: "Loading Box",
     file: loading_box,
     padding_y: 6,
+    height: "10",
     width: "100%",
+    semiWidth: "20",
     route: "/stocks?kind-loadingbox=true",
   },
 ];

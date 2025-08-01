@@ -51,7 +51,7 @@ const SpecifyForm = ({ onClose, formData, editSelectedTruck }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-8">
-      <div className="flex flex-col md:flex-col w-full gap-4 pb-2 md:px-6 md:py-8 bg-gray-200 rounded-lg">
+      <div className="flex flex-col md:flex-col w-full gap-3 px-4 md:px-6 py-4 md:py-8 bg-gray-200 rounded-lg">
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row gap-2 w-full">
             <div className="w-auto md:w-80 flex flex-row space-x-2 items-center">

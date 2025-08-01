@@ -9,7 +9,7 @@ import Stepper from "./steps/stepper";
 const RequestModal = ({ open, onClose }) => {
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="bg-white !max-w-300">
+      <DialogContent className="bg-white !max-w-100 md:!max-w-300">
         <DialogTitle />
         <DialogDescription />
         <Stepper onClose={onClose} />

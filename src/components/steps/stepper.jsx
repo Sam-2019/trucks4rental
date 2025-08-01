@@ -43,7 +43,7 @@ const Stepper = ({ onClose }) => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col mx-auto focus:outline-none md:flex-row space-y-6"
+      className="flex flex-col mx-auto focus:outline-none md:flex-row space-y-6 overflow-y-auto max-h-[570px]"
     >
       {/* StepIndicators */}
       <div className="w-full md:w-40">
@@ -66,7 +66,7 @@ const Stepper = ({ onClose }) => {
         </div>
       </div>
 
-      <div className="flex-grow sm:px-8 relative space-y-8">
+      <div className="flex-grow sm:px-8 relative space-y-4 md:space-y-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
           We find your vehicle
         </h2>
