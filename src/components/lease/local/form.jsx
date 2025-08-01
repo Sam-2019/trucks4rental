@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { foreignRequest, materialTypes } from "../../lib/utils";
+import { localRequest, materialTypes } from "@/lib/utils";
 
-const InternationalForm = ({ onClose }) => {
+const LocalForm = ({ onClose }) => {
   const handleClose = () => {
     onClose();
   };
@@ -12,7 +12,7 @@ const InternationalForm = ({ onClose }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(foreignRequest),
+    resolver: yupResolver(localRequest),
     defaultValues: {
       materialType: "",
       pickup: "",
@@ -48,7 +48,9 @@ const InternationalForm = ({ onClose }) => {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="contact" className="text-sm font-medium">Mobile</label>
+          <label htmlFor="contact" className="text-sm font-medium">
+            Mobile
+          </label>
           <input
             id="contact"
             type="text"
@@ -59,7 +61,9 @@ const InternationalForm = ({ onClose }) => {
         </div>
 
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="email" className="text-sm font-medium">Email</label>
+          <label htmlFor="email" className="text-sm font-medium">
+            Email
+          </label>
           <input
             id="email"
             type="text"
@@ -107,49 +111,32 @@ const InternationalForm = ({ onClose }) => {
         </div>
 
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="pickupLandmark" className="text-sm font-medium">
-            Pickup Location Landmark
+          <label htmlFor="pickupTimestamp" className="text-sm font-medium">
+            Pickup Date/Time
           </label>
           <input
-            id="pickupLandmark"
-            type="text"
-            {...register("pickupLandmark")}
+            id="pickupTimestamp"
+            type="datetime-local"
+            {...register("pickupTimestamp")}
             className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
           />
           <p className="text-red-300 text-sm">
-            {errors.pickupLandmark?.message}
+            {errors.pickupTimestamp?.message}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="destination" className="text-sm font-medium">
-            Destination
-          </label>
-          <input
-            id="destination"
-            type="text"
-            {...register("destinatiodestinationnLandmark")}
-            className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-          />
-          <p className="text-red-300 text-sm">{errors.destination?.message}</p>
-        </div>
-
-        <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="destinationLandmark" className="text-sm font-medium">
-            Destination Landmark
-          </label>
-          <input
-            id="destinationLandmark"
-            type="text"
-            {...register("destinationLandmark")}
-            className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-          />
-          <p className="text-red-300 text-sm">
-            {errors.destinationLandmark?.message}
-          </p>
-        </div>
+      <div className="flex flex-col gap-2 w-full">
+        <label htmlFor="destination" className="text-sm font-medium">
+          Destination
+        </label>
+        <input
+          id="destination"
+          type="text"
+          {...register("destination")}
+          className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
+        />
+        <p className="text-red-300 text-sm">{errors.destination?.message}</p>
       </div>
 
       <div className="flex flex-col gap-2 w-full">
@@ -207,4 +194,4 @@ const InternationalForm = ({ onClose }) => {
   );
 };
 
-export default InternationalForm;
+export default LocalForm;

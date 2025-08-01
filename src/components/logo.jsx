@@ -11,7 +11,7 @@ const Logo = ({ width,  center = "items-center"}) => {
     src={logo}
     alt="Trucks4Rental Logo"
     className={`object-cover w-${validWidth} md:w-${validWidth} h-auto`}
-    // width={validWidth}
+    width={validWidth}
     onClick={() => {
      navigate("/");
     }}

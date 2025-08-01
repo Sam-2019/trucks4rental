@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { localRequest, materialTypes } from "../../lib/utils";
+import { foreignRequest, materialTypes } from "@/lib/utils";
 
-const LocalForm = ({ onClose }) => {
+const ForeignForm = ({ onClose }) => {
   const handleClose = () => {
     onClose();
   };
@@ -12,7 +12,7 @@ const LocalForm = ({ onClose }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(localRequest),
+    resolver: yupResolver(foreignRequest),
     defaultValues: {
       materialType: "",
       pickup: "",
@@ -48,7 +48,9 @@ const LocalForm = ({ onClose }) => {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="contact" className="text-sm font-medium">Mobile</label>
+          <label htmlFor="contact" className="text-sm font-medium">
+            Mobile
+          </label>
           <input
             id="contact"
             type="text"
@@ -59,7 +61,9 @@ const LocalForm = ({ onClose }) => {
         </div>
 
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="email" className="text-sm font-medium">Email</label>
+          <label htmlFor="email" className="text-sm font-medium">
+            Email
+          </label>
           <input
             id="email"
             type="text"
@@ -105,19 +109,19 @@ const LocalForm = ({ onClose }) => {
           />
           <p className="text-red-300 text-sm">{errors.pickup?.message}</p>
         </div>
-        
+
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="pickupLandmark" className="text-sm font-medium">
-            Pickup Location Landmark
+          <label htmlFor="pickupTimestamp" className="text-sm font-medium">
+            Pickup Date/Time
           </label>
           <input
-            id="pickupLandmark"
-            type="text"
-            {...register("pickupLandmark")}
+            id="pickupTimestamp"
+            type="datetime-local"
+            {...register("pickupTimestamp")}
             className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
           />
           <p className="text-red-300 text-sm">
-            {errors.pickupLandmark?.message}
+            {errors.pickupTimestamp?.message}
           </p>
         </div>
       </div>
@@ -207,4 +211,4 @@ const LocalForm = ({ onClose }) => {
   );
 };
 
-export default LocalForm;
+export default ForeignForm;

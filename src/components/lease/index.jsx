@@ -5,8 +5,8 @@ import {
   DialogContent,
   DialogDescription,
 } from "@/components/ui/dialog";
-import LocalForm from "./local";
-import InternationalForm from "./international";
+import Local from "./local";
+import Foreign from "./foreign";
 
 const LeaseModal = ({ open, onClose }) => {
   return (
@@ -43,8 +43,8 @@ const Lease = ({ onClose }) => {
         </div>
       )}
 
-      {active === "local" && <LocalForm onClose={onClose} />}
-      {active === "international" && <InternationalForm onClose={onClose} />}
+      {active === "local" && <Local onClose={onClose} />}
+      {active === "international" && <Foreign onClose={onClose} />}
     </div>
   );
 };
