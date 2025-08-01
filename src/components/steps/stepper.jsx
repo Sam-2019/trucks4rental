@@ -43,7 +43,7 @@ const Stepper = ({ onClose }) => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col mx-auto focus:outline-none md:flex-row space-y-6 overflow-y-auto max-h-[570px]"
+      className="flex flex-col mx-auto focus:outline-none md:flex-row space-y-6 overflow-y-auto h-[570px] md:h-auto"
     >
       {/* StepIndicators */}
       <div className="w-full md:w-40">
