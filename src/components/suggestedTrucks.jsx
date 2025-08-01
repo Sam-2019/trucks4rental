@@ -4,10 +4,10 @@ import { MainCarouselTransition } from "./carousel/carouselTransition";
 
 export default function SuggestedTrucks({ header, trucks = recommended_trucks }) {
  return (
-  <div className="items-center">
-   <h2 className="text-2xl font-bold text-slate-500 py-5">{header}</h2>
+  <div className="items-center space-y-5">
+   <h2 className="text-2xl font-bold text-slate-500">{header}</h2>
 
-   <div className="flex flex-col md:flex-row gap-5 ">
+   <div className="flex flex-col md:flex-row gap-x-7 gap-y-10">
     {trucks.map((vehicle, index) => (
      <div key={vehicle.id} className="flex font-sans w-full">
       <div className="relative bg-white rounded-lg shadow-lg overflow-hidden w-full">
@@ -84,7 +84,7 @@ export default function SuggestedTrucks({ header, trucks = recommended_trucks })
 
         <div className="my-5 border-t border-gray-300" />
 
-        <div>
+        <div className="">
          <p className="text-gray-500 text-2xl font-medium">Price</p>
          <p className="text-2xl font-medium">
           {vehicle.currency} {vehicle.price}{" "}

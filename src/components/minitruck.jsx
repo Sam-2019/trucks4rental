@@ -44,8 +44,8 @@ export default function Minitrucks({ header }) {
         </div>
       </div>
 
-      <div className="md:hidden">
-        <h2 className="text-2xl font-bold text-slate-500 py-5">{header}</h2>
+      <div className="md:hidden space-y-5 border-2 border-red-500">
+        <h2 className="text-2xl font-bold text-slate-500">{header}</h2>
         <div className="flex flex-col md:flex-row justify-between border-2 border-red-500 space-y-5">
           <div className="grid grid-cols-2 item-center">
             {truckTypes.map((truckType) => (

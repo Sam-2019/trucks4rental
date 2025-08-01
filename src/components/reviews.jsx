@@ -1,6 +1,6 @@
 export default function Reviews() {
  return (
-  <div className="space-y-10 py-10">
+  <div className="space-y-10 mb-10">
    <div>
     <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-2 leading-tight">Don't just take our words.</h2>
     <p className="text-3xl sm:text-4xl font-semibold text-gray-900">Over 1000+ people trust us.</p>

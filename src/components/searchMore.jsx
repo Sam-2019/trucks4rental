@@ -1,6 +1,6 @@
 export default function SearchMore({ onOpen }) {
   return (
-    <div className="flex flex-col justify-center space-y-10">
+    <div className="flex flex-col justify-center space-y-10 ">
       <h2 className="text-center text-2xl font-semibold text-gray-900 leading-tight">
         Still not found what you were looking for? Let us help you.
       </h2>
