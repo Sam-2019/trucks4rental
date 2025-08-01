@@ -6,7 +6,7 @@ import { Phone, MessageCircle, Mail } from "lucide-react";
 
 const Specification = ({ vehicle }) => {
   return (
-    <div className="p-7 rounded-3xl bg-gray-200 space-y-3">
+    <div className="p-7 rounded-lg bg-gray-200 space-y-3">
       <div className="flex flex-row justify-between items-center">
         <p className="text-2xl font-semibold">Vehicle specifications</p>
         <div className="text-2xl font-semibold hidden md:block">
@@ -55,7 +55,7 @@ const Specification = ({ vehicle }) => {
 
 const Contact = () => {
   return (
-    <div className="border-1 border-gray-300 p-9 rounded-3xl space-y-3">
+    <div className="border-1 border-gray-200 p-9 rounded-lg space-y-3">
       <p className="text-2xl font-semibold">
         Contact us direct. We are open 6 days a week.
       </p>

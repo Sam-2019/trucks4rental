@@ -64,7 +64,7 @@ export default function WhyUs() {
     border-b-[200px] border-b-gray-300
     "
      />
-     <div className="w-1/2 bg-gray-300 rounded-r-xl" />
+     <div className="w-1/2 bg-gray-200 rounded-r-xl" />
     </div>
    </div>
   </div>

@@ -55,7 +55,7 @@ const Stepper = ({ onClose }) => {
               ${
                 step.index === currentStep
                   ? "bg-amber-600 text-white"
-                  : "bg-gray-300 text-gray-700"
+                  : "bg-gray-200 text-gray-700"
               }`}
               >
                 {step.index + 1}

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { Button } from "@/components/ui/button";
 import whatappSvg from "@/assets/svgs/whatsapp.svg";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, Mail } from "lucide-react";
 import checkCircleSVG from "@/assets/svgs/check-circle.svg";
 
 export default function Find({ onClose }) {
@@ -23,30 +23,52 @@ export default function Find({ onClose }) {
 
       <div className="border-1 border-gray-200 p-6 rounded-lg space-y-3">
         <p className="font-semibold">
-          An immediate guestions or need some help?
+          An immediate questions or need some help?
         </p>
 
         <div className="flex flex-row flex-wrap space-x-3 space-y-3">
-          <Button asChild size="lg" className="border-1 border-gray-200">
-            <NavLink to="#" className="flex flex-row items-center">
-              <Phone size={50} color="gray" />
-              <p className="text-sm">Call us</p>
-            </NavLink>
-          </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="w-full md:w-auto"
+        >
+          <NavLink to="#" className="flex flex-row items-center">
+            <Phone size={23} />
+            <p className="text-sm">Call us</p>
+          </NavLink>
+        </Button>
 
-          <Button asChild size="lg" className="border-1 border-gray-200">
-            <NavLink to="#" className="flex flex-row items-center">
-              <MessageCircle size={50} color="gray" />
-              <p className="text-sm">Chat with us</p>
-            </NavLink>
-          </Button>
+        <Button asChild variant="outline" size="lg" className="w-full md:w-auto">
+          <NavLink to="#" className="flex flex-row items-center">
+            <MessageCircle size={23} />
+            <p className="text-sm">Chat with us</p>
+          </NavLink>
+        </Button>
 
-          <Button asChild size="lg" className="border-1 border-gray-200">
-            <NavLink to="#" className="flex flex-row items-center">
-              <img src={whatappSvg} alt="whatsapp" width="20" />
-              <p className="text-sm">Send a Whatsapp message</p>
-            </NavLink>
-          </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="w-full md:w-auto"
+        >
+          <NavLink to="#" className="flex flex-row items-center">
+            <Mail size={23} />
+            <p className="text-sm">Email us</p>
+          </NavLink>
+        </Button>
+
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="w-full md:w-auto"
+        >
+          <NavLink to="#" className="flex flex-row items-center">
+            <img src={whatappSvg} alt="whatsapp" width="20" />
+            <p className="text-sm"> Send a Whatsapp message</p>
+          </NavLink>
+        </Button>
         </div>
       </div>
 

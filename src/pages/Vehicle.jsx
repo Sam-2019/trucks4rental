@@ -58,7 +58,7 @@ export default function Vehicle() {
               </button>
             </div>
 
-            <div className="space-y-6 p-9 rounded-3xl bg-gray-200">
+            <div className="space-y-6 p-9 rounded-lg bg-gray-200">
               <p className="text-2xl font-semibold">
                 We provide assurances you can rely on
               </p>
