@@ -4,7 +4,7 @@ import Reviews from "../components/reviews";
 import Minitrucks from "../components/minitruck";
 import SearchMore from "../components/searchMore";
 import WokingHours from "../components/workingHours";
-import RequestModal from "../components/requestModal";
+import RequestModal from "../components/request";
 import SelectionBanner from "../components/selectionBanner";
 import SuggestedTrucks from "../components/suggestedTrucks";
 
