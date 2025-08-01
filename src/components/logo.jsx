@@ -4,13 +4,14 @@ import { useNavigate } from "react-router";
 const Logo = ({ width,  center = "items-center"}) => {
  const navigate = useNavigate();
  const validWidth = width;
+
  return (
   <div className={`flex flex-col ${center}`}>
    <img
     src={logo}
     alt="Trucks4Rental Logo"
     className={`object-cover w-${validWidth} md:w-${validWidth} h-auto`}
-    width={validWidth}
+    // width={validWidth}
     onClick={() => {
      navigate("/");
     }}
