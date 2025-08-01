@@ -14,7 +14,7 @@ const LeaseModal = ({ open, onClose }) => {
       <DialogContent className="bg-white !max-w-100 md:!max-w-200">
         <DialogTitle />
         <DialogDescription />
-        <Options onClose={onClose} />
+        <Lease onClose={onClose} />
       </DialogContent>
     </Dialog>
   );
@@ -22,7 +22,7 @@ const LeaseModal = ({ open, onClose }) => {
 
 export default LeaseModal;
 
-const Options = ({ onClose }) => {
+const Lease = ({ onClose }) => {
   const [active, setActve] = useState(null);
   return (
     <div>
