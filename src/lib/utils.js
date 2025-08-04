@@ -26,7 +26,7 @@ export function cn(...inputs) {
 }
 
 export const mobileItems = [
-  { index: 0, name: "Stocks", route: "/stocks" },
+  { index: 0, name: "Inventory", route: "/inventory" },
   { index: 1, name: "Services", route: "/services" },
   { index: 2, name: "Contact", route: "/contact" },
 ];
@@ -283,7 +283,7 @@ export const truckTypes = [
     width: "100%",
     homeWidth: "100%",
     semiWidth: "20",
-    route: "/stocks?kind-tipper=true",
+    route: "/inventory?kind-tipper=true",
   },
   {
     id: 1,
@@ -295,7 +295,7 @@ export const truckTypes = [
     width: "100%",
     homeWidth: "100%",
     semiWidth: "20",
-    route: "/stocks?kind-semitrailer=true",
+    route: "/inventory?kind-semitrailer=true",
   },
   {
     id: 2,
@@ -307,7 +307,7 @@ export const truckTypes = [
     width: "100%",
     homeWidth: "100%",
     semiWidth: "20",
-    route: "/stocks?kind-truck=true",
+    route: "/inventory?kind-truck=true",
   },
   {
     id: 3,
@@ -318,7 +318,7 @@ export const truckTypes = [
     height: "10",
     width: "80%",
     semiWidth: "20",
-    route: "/stocks?kind-trailer=true",
+    route: "/inventory?kind-trailer=true",
   },
   {
     id: 4,
@@ -329,7 +329,7 @@ export const truckTypes = [
     height: "10",
     width: "79%",
     semiWidth: "15",
-    route: "/stocks?kind-tractorunit=true",
+    route: "/inventory?kind-tractorunit=true",
   },
   {
     id: 5,
@@ -341,7 +341,7 @@ export const truckTypes = [
     width: "100%",
     homeWidth: "100%",
     semiWidth: "20",
-    route: "/stocks?kind-mixer=true",
+    route: "/inventory?kind-mixer=true",
   },
   {
     id: 6,
@@ -353,7 +353,7 @@ export const truckTypes = [
     width: "100%",
     homeWidth: "100%",
     semiWidth: "20",
-    route: "/stocks?kind-loadingbox=true",
+    route: "/inventory?kind-loadingbox=true",
   },
 ];
 
@@ -2094,7 +2094,7 @@ export const recommended_trucks = [
     suspensionType: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
+    url: "/inventory/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
     images: [
       {
         id: 0,
@@ -2147,7 +2147,7 @@ export const recommended_trucks = [
     suspensionType: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
+    url: "/inventory/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
       {
         id: 0,
@@ -2200,7 +2200,7 @@ export const recommended_trucks = [
     suspensionType: "full air suspension",
     type: "semi_trailer",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
+    url: "/inventory/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
       {
         id: 0,
@@ -2256,7 +2256,7 @@ export const comparable_trucks = [
     suspensionType: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
+    url: "/inventory/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
     images: [
       {
         id: 0,
@@ -2309,7 +2309,7 @@ export const comparable_trucks = [
     suspensionType: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
+    url: "/inventory/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
       {
         id: 0,
@@ -2362,7 +2362,7 @@ export const comparable_trucks = [
     suspensionType: "full air suspension",
     type: "semi_trailer",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
+    url: "/inventory/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
       {
         id: 0,
@@ -2418,7 +2418,7 @@ export const stocks = [
     suspensionType: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
+    url: "/inventory/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
     images: [
       {
         id: 0,
@@ -2471,7 +2471,7 @@ export const stocks = [
     suspensionType: "",
     type: "tractor_unit",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
+    url: "/inventory/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
       {
         id: 0,
@@ -2524,7 +2524,7 @@ export const stocks = [
     suspensionType: "full air suspension",
     type: "semi_trailer",
     currencySuffix: "Excl. vat",
-    url: "/stocks/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
+    url: "/inventory/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
       {
         id: 0,

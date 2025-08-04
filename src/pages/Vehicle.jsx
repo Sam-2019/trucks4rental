@@ -27,7 +27,7 @@ export default function Vehicle() {
     <div className="flex flex-row place-content-center text-gray-700">
       <div className="max-w-6xl space-y-5">
         <div className="flex justify-between">
-          <NavLink to="/stocks" className="flex flex-row items-center ">
+          <NavLink to="/inventory" className="flex flex-row items-center ">
             <ChevronLeft size={23} />
             <span>Back to the selection</span>
           </NavLink>

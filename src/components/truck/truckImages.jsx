@@ -22,11 +22,11 @@ function TruckImages() {
    className='rounded-l-lg'
    width={380}
    onClick={() => {
-    navigate("/stocks/vehicle/123");
+    navigate("/inventory/vehicle/123");
    }}
    onKeyDown={(e) => {
     if (e.key === "Enter" || e.key === " ") {
-     navigate("/stocks/vehicle/123");
+     navigate("/inventory/vehicle/123");
     }
    }}
   />
@@ -40,11 +40,11 @@ function TruckImagesMobile() {
    alt='TruckImage'
    className='w-full bg-cover rounded-t-lg'
    onClick={() => {
-    navigate("/stocks/vehicle/123");
+    navigate("/inventory/vehicle/123");
    }}
    onKeyDown={(e) => {
     if (e.key === "Enter" || e.key === " ") {
-     navigate("/stocks/vehicle/123");
+     navigate("/inventory/vehicle/123");
     }
    }}
   />

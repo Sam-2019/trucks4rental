@@ -11,7 +11,7 @@ import {
   sortStocks,
 } from "../lib/utils";
 
-export default function Stocks() {
+export default function Inventory() {
   const location = useLocation();
   const [inventory, setInventory] = useState(stocks);
   const [searchParams, setSearchParams] = useSearchParams();

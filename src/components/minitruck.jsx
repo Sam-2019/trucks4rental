@@ -32,10 +32,10 @@ export default function Minitrucks({ header }) {
             ))}
           </div>
 
-          {/* Right - Stocks, Services, Contact */}
+          {/* Right - Inventory, Services, Contact */}
 
           <NavLink
-            to="/stocks"
+            to="/inventory"
             className="hover:text-amber-600 hover:underline underline-offset-8 flex justify-center items-center space-x-1 text-sm font-medium text-gray-700 py-4 "
           >
             <p>All Vehicles </p>
@@ -66,7 +66,7 @@ export default function Minitrucks({ header }) {
           </div>
 
           <NavLink
-            to="/stocks"
+            to="/inventory"
             className="hover:text-amber-600 hover:underline underline-offset-8 flex justify-center items-center space-x-1 text-sm font-medium text-gray-700"
           >
             <p>All Vehicles </p>

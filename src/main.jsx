@@ -1,6 +1,6 @@
 import "./index.css";
 import Home from "./pages/Home.jsx";
-import Stocks from "./pages/Stocks.jsx";
+import Inventory from "./pages/Inventory.jsx";
 import Contact from "./pages/Contact.jsx";
 import Services from "./pages/Services.jsx";
 import { createRoot } from "react-dom/client";
@@ -34,9 +34,9 @@ const router = createBrowserRouter([
    { path: "about", Component: null },
 
    {
-    path: "stocks",
+    path: "inventory",
     children: [
-     { index: true, Component: Stocks },
+     { index: true, Component: Inventory },
      { path: "vehicle/details/:vid/:vname", loader: vehicleLoader, Component: Vehicle },
      { path: "vehicle/:pid/edit", Component: EditVehicle },
     ],
