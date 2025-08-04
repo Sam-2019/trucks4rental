@@ -1,6 +1,7 @@
 import LocalForm from "./form";
 import { useState } from "react";
 import { industries } from "@/lib/utils";
+import OtherLocalForm from "./otherForm";
 
 const Local = ({ onClose }) => {
   const [active, setActve] = useState(null);
@@ -77,6 +78,7 @@ const Local = ({ onClose }) => {
               </button>
             ))}
           </div>
+          {industryItems.length === 0 && <OtherLocalForm />}
         </div>
       )}
 

@@ -39,7 +39,7 @@ export const industries = [
       "Cement",
       "Gravel",
       "Steel",
-      "Bricks",
+      "Blocks",
       "Tiles",
       "Paint",
       "Wood",
@@ -135,6 +135,12 @@ export const industries = [
     ],
     truckTypes: ["Flatbed", "Box Truck", "Forklift-Ready Truck"],
   },
+  {
+    id: 7,
+    name: "Other",
+    examples: [],
+    truckTypes: ["Flatbed", "Box Truck", "Forklift-Ready Truck"],
+  },
 ];
 
 export const authSchema = yup
@@ -198,6 +204,13 @@ export const localRequest = yup
     name: yup.string().required("Required"),
     contact: yup.string().required("Required"),
     email: yup.string().required("Required"),
+  })
+  .required();
+
+  export const otherLocalRequest = yup
+  .object({
+    materialType: yup.string().required("Required"),
+    description: yup.string().required("Required"),
   })
   .required();
 
@@ -2597,16 +2610,6 @@ export const materialTypes = [
     value: "packaged foods",
     disabled: false,
   },
-];
-
-export const blockCourtOptions = [
-  { value: "Block-A", label: "Block-A" },
-  { value: "Block-B", label: "Block-B" },
-  { value: "Block-C", label: "Block-C" },
-  { value: "Addis Ababa Court", label: "Addis Ababa Court" },
-  { value: "Dar es Salaam Court", label: "Dar es Salaam Court" },
-  { value: "Kampala Court", label: "Kampala Court" },
-  { value: "Nairobi Court", label: "Nairobi Court" },
 ];
 
 export const specifications = [
