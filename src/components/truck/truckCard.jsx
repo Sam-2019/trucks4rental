@@ -6,7 +6,6 @@ import { SubCarouselTransition } from "../carousel/carouselTransition";
 import { MainCarouselTransition } from "../carousel/carouselTransition";
 
 function TruckCard({ vehicle }) {
- 
   const [fill, setFill] = useState(false);
 
   const toggleFill = () => {
@@ -99,6 +98,13 @@ function TruckCard({ vehicle }) {
             <p className="text-sm flex flex-row justify-between items-center">
               <span>Engine Capacity</span>
               <span>{vehicle.engineCapacity}</span>
+            </p>
+          )}
+
+          {vehicle.configuration && (
+            <p className="text-sm flex flex-row justify-between items-center">
+              <span>Configuration</span>
+              <span>{vehicle.configuration}</span>
             </p>
           )}
         </div>

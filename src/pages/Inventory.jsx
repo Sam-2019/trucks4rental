@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { useLocation, useSearchParams } from "react-router";
-import { ChevronsDown, ChevronsUp, Trash2, X } from "lucide-react";
-import { TruckCard, TruckCardMobileNew } from "../components/truck/truckCard";
 import {
   domain,
   stocks,
   siteName,
+  sortStocks,
   headers as headersData,
   getDisplayNamesFromSearchParams,
-  sortStocks,
 } from "../lib/utils";
+import { useState } from "react";
+import { useLocation, useSearchParams } from "react-router";
+import { ChevronsDown, ChevronsUp, Trash2, X } from "lucide-react";
+import { TruckCard, TruckCardMobileNew } from "../components/truck/truckCard";
 
 export default function Inventory() {
   const location = useLocation();
@@ -68,7 +68,7 @@ export default function Inventory() {
   };
 
   const sortInventory = (value) => {
-    if(value === "default-sorting") return setInventory(stocks);
+    if (value === "default-sorting") return setInventory(stocks);
     const sortitems = sortStocks(inventory, value);
     setInventory(sortitems);
   };
@@ -95,7 +95,6 @@ export default function Inventory() {
           </div>
 
           {/* <CheckboxPage/> */}
-
           <div className="space-y-7">
             {Object.values(headersData).map((header) => {
               const [showAll, setShowAll] = useState(false);

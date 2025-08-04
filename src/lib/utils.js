@@ -79,7 +79,7 @@ export const industries = [
     ],
     truckTypes: ["Reefer Truck", "Covered Pickup", "Open Truck"],
   },
-,
+  ,
   {
     id: 3,
     name: "Home & Lifestyle",
@@ -121,7 +121,7 @@ export const industries = [
     ],
     truckTypes: ["HAZMAT Truck", "Ventilated Enclosed Truck"],
   },
-    {
+  {
     id: 6,
     name: "Hardware, Industrial & Manufacturing",
     examples: [
@@ -134,7 +134,7 @@ export const industries = [
       "Palletized Goods",
     ],
     truckTypes: ["Flatbed", "Box Truck", "Forklift-Ready Truck"],
-  }
+  },
 ];
 
 export const authSchema = yup
@@ -2722,6 +2722,16 @@ export function sortStocks(stocks, sortOption) {
   // Create a copy of the array to avoid mutating the original array.
   const sortedStocks = [...stocks];
 
+  // Helper function to parse mileage string into a number.
+  const parseMileage = (mileageStr) => {
+    // If the string is empty, return a very high number to place it at the end.
+    if (!mileageStr) {
+      return null;
+    }
+    // Remove all non-digit characters except the comma, then replace the comma and parse.
+    return parseFloat(mileageStr.replace(/[^0-9,]/g, "").replace(",", ""));
+  };
+
   // Use a switch statement to handle different sorting options.
   switch (sortOption) {
     case "price-asc":
@@ -2754,6 +2764,18 @@ export function sortStocks(stocks, sortOption) {
       // The 'YYYY-M' format can be compared as a string, but we need to reverse the comparison.
       sortedStocks.sort((a, b) =>
         b.matriculationYear.localeCompare(a.matriculationYear)
+      );
+      break;
+    case "km-asc":
+      // Sort by mileage in ascending order.
+      sortedStocks.sort(
+        (a, b) => parseMileage(a.mileage) - parseMileage(b.mileage)
+      );
+      break;
+    case "km-desc":
+      // Sort by mileage in descending order.
+      sortedStocks.sort(
+        (a, b) => parseMileage(b.mileage) - parseMileage(a.mileage)
       );
       break;
     default:
