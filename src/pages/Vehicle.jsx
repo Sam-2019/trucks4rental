@@ -54,7 +54,7 @@ export default function Vehicle() {
                 className="md:hidden w-full px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
                 onClick={() => onOpen()}
               >
-                Lease
+                Rent
               </button>
             </div>
 
@@ -138,7 +138,7 @@ export default function Vehicle() {
               className="w-full px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
               onClick={() => onOpen()}
             >
-              Lease
+              Rent
             </button>
             <VehicleSpecification vehicle={vehicle} />
 
