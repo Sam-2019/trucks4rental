@@ -23,7 +23,7 @@ export default function SelectionBanner() {
             Need a tractor, (semi-)trailer, frigo, or closed box?
           </p>
           <h1 className="text-3xl md:text-4xl font-light leading-snug text-white">
-            CHECK OUT OUR <span className="font-bold">STOCK</span>
+            CHECK OUT OUR <span className="font-bold">INVENTORY</span>
           </h1>
 
           {/* <NavLink
