@@ -40,7 +40,7 @@ const Search = ({ nextStep, prevStep }) => {
     <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-8">
       <div className="flex flex-col md:flex-col w-full gap-2 px-4 md:px-6 py-4 md:py-8 bg-gray-200 rounded-lg">
         <div className="flex flex-col md:flex-row w-full gap-2 md:pb-0">
-          <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
             <label htmlFor="firstName" className="text-sm font-medium">
               First Name
             </label>
@@ -56,7 +56,7 @@ const Search = ({ nextStep, prevStep }) => {
             <p className="text-red-300 text-sm">{errors.firstName?.message}</p>
           </div>
 
-          <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
             <label htmlFor="lastName" className="text-sm font-medium">
               Last Name
             </label>
@@ -74,7 +74,7 @@ const Search = ({ nextStep, prevStep }) => {
         </div>
 
         <div className="flex flex-col md:flex-row w-full gap-2 md:pb-0">
-          <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
             <label htmlFor="email" className="text-sm font-medium">
               Email
             </label>
@@ -90,7 +90,7 @@ const Search = ({ nextStep, prevStep }) => {
             <p className="text-red-300 text-sm">{errors.email?.message}</p>
           </div>
 
-          <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
             <label htmlFor="phoneNumber" className="text-sm font-medium">
               Phone Number
             </label>
@@ -109,7 +109,7 @@ const Search = ({ nextStep, prevStep }) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="companyName" className="text-sm font-medium">
             Company Name
           </label>
@@ -125,7 +125,7 @@ const Search = ({ nextStep, prevStep }) => {
           <p className="text-red-300 text-sm">{errors.companyName?.message}</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="contact" className="text-sm font-medium">
             How can we contact you?
           </label>

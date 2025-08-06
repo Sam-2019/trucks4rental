@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { foreignRequest, materialTypes } from "@/lib/utils";
+import { localRequest } from "@/lib/utils";
 
-const ForeignForm = ({ onClose }) => {
+const LocalForm = ({ onClose, nextState }) => {
   const handleClose = () => {
     onClose();
   };
@@ -12,28 +12,25 @@ const ForeignForm = ({ onClose }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(foreignRequest),
+    resolver: yupResolver(localRequest),
     defaultValues: {
-      materialType: "",
-      pickup: "",
-      pickupLandmark: "",
-      destination: "",
-      destinationLandmark: "",
-      truckType: "",
-      truckId: "",
-      name: "",
-      contact: "",
-      email: "",
+      name: "Kwame Opam",
+      contact: "0244444444",
+      email: "opam@gmail.com",
+      pickup: "Ada",
+      destination: "Accra",
+      truckId: "88356",
     },
   });
 
   const onSubmit = (data) => {
     console.log(data);
+    nextState();
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-3">
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
         <label htmlFor="name" className="text-sm font-medium">
           Full Name
         </label>
@@ -42,12 +39,12 @@ const ForeignForm = ({ onClose }) => {
           type="text"
           {...register("name")}
           className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-        />{" "}
+        />
         <p className="text-red-300 text-sm">{errors.name?.message}</p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col gap-1 w-full">
           <label htmlFor="contact" className="text-sm font-medium">
             Mobile
           </label>
@@ -60,7 +57,7 @@ const ForeignForm = ({ onClose }) => {
           <p className="text-red-300 text-sm">{errors.contact?.message}</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col gap-1 w-full">
           <label htmlFor="email" className="text-sm font-medium">
             Email
           </label>
@@ -74,30 +71,8 @@ const ForeignForm = ({ onClose }) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
-        <label htmlFor="materialType" className="text-sm font-medium">
-          Type of material
-        </label>
-        <select
-          {...register("materialType")}
-          id="materialType"
-          className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-        >
-          {materialTypes.map((option) => (
-            <option
-              key={option.index}
-              value={option.value}
-              disabled={option.disabled}
-            >
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <p className="text-red-300 text-sm">{errors.materialType?.message}</p>
-      </div>
-
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col gap-1 w-full">
           <label htmlFor="pickup" className="text-sm font-medium">
             Pickup Location
           </label>
@@ -110,76 +85,22 @@ const ForeignForm = ({ onClose }) => {
           <p className="text-red-300 text-sm">{errors.pickup?.message}</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="pickupTimestamp" className="text-sm font-medium">
-            Pickup Date/Time
-          </label>
-          <input
-            id="pickupTimestamp"
-            type="datetime-local"
-            {...register("pickupTimestamp")}
-            className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-          />
-          <p className="text-red-300 text-sm">
-            {errors.pickupTimestamp?.message}
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col gap-1 w-full">
           <label htmlFor="destination" className="text-sm font-medium">
             Destination
           </label>
           <input
             id="destination"
             type="text"
-            {...register("destinatiodestinationnLandmark")}
+            {...register("destination")}
             className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
           />
           <p className="text-red-300 text-sm">{errors.destination?.message}</p>
         </div>
-
-        <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="destinationLandmark" className="text-sm font-medium">
-            Destination Landmark
-          </label>
-          <input
-            id="destinationLandmark"
-            type="text"
-            {...register("destinationLandmark")}
-            className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-          />
-          <p className="text-red-300 text-sm">
-            {errors.destinationLandmark?.message}
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 w-full">
-        <label htmlFor="truckType" className="text-sm font-medium">
-          Truck Type
-        </label>
-        <select
-          {...register("truckType")}
-          id="truckType"
-          className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-        >
-          {materialTypes.map((option) => (
-            <option
-              key={option.index}
-              value={option.value}
-              disabled={option.disabled}
-            >
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <p className="text-red-300 text-sm">{errors.truckType?.message}</p>
       </div>
 
       <div className="hidden">
-        <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col gap-1 w-full">
           <label htmlFor="truckId" className="text-sm font-medium">
             Truck ID
           </label>
@@ -193,14 +114,14 @@ const ForeignForm = ({ onClose }) => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between">
-        <button
+      <div className="flex flex-row justify-end">
+        {/* <button
           type="button"
           onClick={() => handleClose()}
           className="px-8 py-3 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
         >
           Cancel
-        </button>
+        </button> */}
 
         <input
           type="submit"
@@ -211,4 +132,4 @@ const ForeignForm = ({ onClose }) => {
   );
 };
 
-export default ForeignForm;
+export default LocalForm;

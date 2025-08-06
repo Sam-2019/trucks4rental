@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LeaseModal from "../components/lease";
+import RentModal from "../components/rent";
 import { comparable_trucks } from "../lib/utils";
 import { NavLink, useLoaderData } from "react-router";
 import { ChevronLeft, MapPin, Check } from "lucide-react";
@@ -160,7 +160,7 @@ export default function Vehicle() {
         </div>
 
         <InspectionReport />
-        <LeaseModal open={isModalOpen} onClose={onClose} />
+        <RentModal open={isModalOpen} onClose={onClose} />
         <SuggestedTrucks
           header="Comparable vehicles"
           trucks={comparable_trucks}

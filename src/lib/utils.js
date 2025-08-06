@@ -194,23 +194,38 @@ export const truckInfo = yup
 
 export const localRequest = yup
   .object({
-    materialType: yup.string().required("Required"),
+    name: yup.string().required("Required"),
+    contact: yup.string().required("Required"),
+    email: yup.string().required("Required"),
     pickup: yup.string().required("Required"),
-    pickupTimestamp: yup.string().required("Required"),
     destination: yup.string().required("Required"),
-
-    truckType: yup.string().required("Required"),
     truckId: yup.string().required("Required"),
+  })
+  .required();
+
+export const materialInfo = yup
+  .object({
+    materialType: yup.string().required("Required"),
+    description: yup.string().required("Required"),
+    pickup: yup.string().required("Required"),
+    destination: yup.string().required("Required"),
+  })
+  .required();
+
+export const requestorInfo = yup
+  .object({
     name: yup.string().required("Required"),
     contact: yup.string().required("Required"),
     email: yup.string().required("Required"),
   })
   .required();
 
-  export const otherLocalRequest = yup
+export const otherLocalRequest = yup
   .object({
     materialType: yup.string().required("Required"),
     description: yup.string().required("Required"),
+    pickup: yup.string().required("Required"),
+    destination: yup.string().required("Required"),
   })
   .required();
 

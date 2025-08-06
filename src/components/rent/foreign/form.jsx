@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { localRequest, materialTypes } from "@/lib/utils";
+import { foreignRequest, materialTypes } from "@/lib/utils";
 
-const LocalForm = ({ onClose }) => {
+const ForeignForm = ({ onClose }) => {
   const handleClose = () => {
     onClose();
   };
@@ -12,7 +12,7 @@ const LocalForm = ({ onClose }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(localRequest),
+    resolver: yupResolver(foreignRequest),
     defaultValues: {
       materialType: "",
       pickup: "",
@@ -33,7 +33,7 @@ const LocalForm = ({ onClose }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-3">
-      <div className="flex flex-col gap-2 w-full">
+  <div className="flex flex-col gap-1 w-full">
         <label htmlFor="name" className="text-sm font-medium">
           Full Name
         </label>
@@ -47,7 +47,7 @@ const LocalForm = ({ onClose }) => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="contact" className="text-sm font-medium">
             Mobile
           </label>
@@ -60,7 +60,7 @@ const LocalForm = ({ onClose }) => {
           <p className="text-red-300 text-sm">{errors.contact?.message}</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="email" className="text-sm font-medium">
             Email
           </label>
@@ -74,7 +74,7 @@ const LocalForm = ({ onClose }) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
+  <div className="flex flex-col gap-1 w-full">
         <label htmlFor="materialType" className="text-sm font-medium">
           Type of material
         </label>
@@ -97,7 +97,7 @@ const LocalForm = ({ onClose }) => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="pickup" className="text-sm font-medium">
             Pickup Location
           </label>
@@ -110,7 +110,7 @@ const LocalForm = ({ onClose }) => {
           <p className="text-red-300 text-sm">{errors.pickup?.message}</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="pickupTimestamp" className="text-sm font-medium">
             Pickup Date/Time
           </label>
@@ -126,20 +126,37 @@ const LocalForm = ({ onClose }) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
-        <label htmlFor="destination" className="text-sm font-medium">
-          Destination
-        </label>
-        <input
-          id="destination"
-          type="text"
-          {...register("destination")}
-          className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
-        />
-        <p className="text-red-300 text-sm">{errors.destination?.message}</p>
+      <div className="flex flex-col sm:flex-row gap-4">
+    <div className="flex flex-col gap-1 w-full">
+          <label htmlFor="destination" className="text-sm font-medium">
+            Destination
+          </label>
+          <input
+            id="destination"
+            type="text"
+            {...register("destinatiodestinationnLandmark")}
+            className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
+          />
+          <p className="text-red-300 text-sm">{errors.destination?.message}</p>
+        </div>
+
+    <div className="flex flex-col gap-1 w-full">
+          <label htmlFor="destinationLandmark" className="text-sm font-medium">
+            Destination Landmark
+          </label>
+          <input
+            id="destinationLandmark"
+            type="text"
+            {...register("destinationLandmark")}
+            className="py-2 px-2 w-auto md:w-full flex items-center p-1 transition-all bg-white rounded-lg text-sm font-medium border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none"
+          />
+          <p className="text-red-300 text-sm">
+            {errors.destinationLandmark?.message}
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
+  <div className="flex flex-col gap-1 w-full">
         <label htmlFor="truckType" className="text-sm font-medium">
           Truck Type
         </label>
@@ -162,7 +179,7 @@ const LocalForm = ({ onClose }) => {
       </div>
 
       <div className="hidden">
-        <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
           <label htmlFor="truckId" className="text-sm font-medium">
             Truck ID
           </label>
@@ -194,4 +211,4 @@ const LocalForm = ({ onClose }) => {
   );
 };
 
-export default LocalForm;
+export default ForeignForm;

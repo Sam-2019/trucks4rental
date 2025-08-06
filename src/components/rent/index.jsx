@@ -8,21 +8,21 @@ import {
 import Local from "./local";
 import Foreign from "./foreign";
 
-const LeaseModal = ({ open, onClose }) => {
+const RentModal = ({ open, onClose }) => {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="bg-white !max-w-100 md:!max-w-200">
         <DialogTitle />
         <DialogDescription />
-        <Lease onClose={onClose} />
+        <Rent onClose={onClose} />
       </DialogContent>
     </Dialog>
   );
 };
 
-export default LeaseModal;
+export default RentModal;
 
-const Lease = ({ onClose }) => {
+const Rent = ({ onClose }) => {
   const [active, setActve] = useState(null);
   return (
     <div>
