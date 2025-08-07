@@ -16,6 +16,10 @@ import truck from "../assets/icons/truck.png";
 import mixer from "../assets/icons/mixer.png";
 import loading_box from "../assets/icons/loading_box.png";
 
+export  const getYear = () => {
+  return new Date().getFullYear();
+ };
+
 export const numberFormat = new Intl.NumberFormat("en-US");
 
 export const officeGMAP =

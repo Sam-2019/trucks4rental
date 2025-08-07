@@ -1,14 +1,12 @@
 import Logo from "./logo";
 import { NavLink } from "react-router";
 import xSvg from "@/assets/svgs/x.svg";
+import { getYear } from "../lib/utils";
 import whatappSvg from "@/assets/svgs/whatsapp.svg";
 import facebookSvg from "@/assets/svgs/facebook.svg";
 import instagramSvg from "@/assets/svgs/instagram.svg";
 
 export default function BottomNav() {
- const getYear = () => {
-  return new Date().getFullYear();
- };
  return (
   <div className="py-7 bg-gray-200">
    <div className="max-w-7xl mx-auto">
@@ -49,12 +47,12 @@ export default function BottomNav() {
 
      <div className="space-y-3 p-5 md:py-0">
       <p className="uppercase text-2xl font-normal">Subscribe to newsletter</p>
-      <div className="">
+      <div>
        <input
         type="email"
         aria-label="subscribe"
         placeholder="Enter your email address"
-        className="w-61 py-2 px-2 max-w-md border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none bg-white rounded-l-lg"
+        className="w-77 py-2 px-2 max-w-md border-1 border-slate-200 hover:border-slate-300 focus:border-slate-300 focus:outline-none bg-white rounded-l-lg"
        />
        <button
         type="button"
