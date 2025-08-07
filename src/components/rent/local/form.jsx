@@ -1,12 +1,8 @@
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { localRequest } from "@/lib/utils";
+import { yupResolver } from "@hookform/resolvers/yup";
 
-const LocalForm = ({ onClose, nextState }) => {
-  const handleClose = () => {
-    onClose();
-  };
-
+const LocalForm = ({ onClose, nextState, previousState }) => {
   const {
     register,
     handleSubmit,
@@ -114,14 +110,14 @@ const LocalForm = ({ onClose, nextState }) => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-end">
-        {/* <button
+      <div className="flex flex-row justify-between">
+        <button
           type="button"
-          onClick={() => handleClose()}
+          onClick={() => previousState()}
           className="px-5 py-2 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
         >
-          Cancel
-        </button> */}
+          Back
+        </button>
 
         <input
           type="submit"

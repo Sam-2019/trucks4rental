@@ -2,11 +2,7 @@ import { useForm } from "react-hook-form";
 import { materialInfo } from "@/lib/utils";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const MaterialForm = ({ onClose, nextState }) => {
-  const handleClose = () => {
-    onClose();
-  };
-
+const MaterialForm = ({ onClose, nextState, previousState }) => {
   const {
     register,
     handleSubmit,
@@ -84,7 +80,14 @@ const MaterialForm = ({ onClose, nextState }) => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-end">
+      <div className="flex flex-row justify-between">
+        <button
+          type="button"
+               onClick={() => previousState()}
+          className="px-5 py-2 font-semibold bg-transparent text-amber-600 border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
+        >
+          Back
+        </button>
         <input
           type="submit"
           className="px-5 py-2 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"

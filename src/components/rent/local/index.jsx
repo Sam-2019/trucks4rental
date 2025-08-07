@@ -49,7 +49,7 @@ const Local = ({ onClose }) => {
 
       {active === "industry" && (
         <div className="space-y-3">
-          <button
+          {/* <button
             type="button"
             onClick={() => {
               setActve(null);
@@ -61,7 +61,7 @@ const Local = ({ onClose }) => {
             className="w-20 md:w-20 hover:bg-red-500 space-x-2 rounded-lg py-2 md:py-3 border-1 border-gray-200"
           >
             back
-          </button>
+          </button> */}
 
           {industryItems.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -81,11 +81,32 @@ const Local = ({ onClose }) => {
                   {example}
                 </button>
               ))}
+
+              <button
+                type="button"
+                onClick={() => {
+                  setActve(null);
+                  setState({
+                    previous: null,
+                    current: null,
+                  });
+                }}
+                className="hover:bg-gray-200 space-x-2 rounded-lg py-2 md:py-3 border-1 border-gray-200"
+              >
+                Back
+              </button>
             </div>
           )}
 
           {industryItems.length === 0 && (
             <MaterialForm
+              previousState={() => {
+                setActve(null);
+                setState({
+                  previous: null,
+                  current: null,
+                });
+              }}
               nextState={() => {
                 setActve("requestorInfo");
                 setState({
@@ -100,7 +121,7 @@ const Local = ({ onClose }) => {
 
       {active === "subIndustry" && (
         <div className="space-y-3">
-          <button
+          {/* <button
             type="button"
             onClick={() => {
               setActve(state.previous);
@@ -112,9 +133,16 @@ const Local = ({ onClose }) => {
             className="w-20 md:w-20 hover:bg-yellow-500 space-x-2 rounded-lg py-2 md:py-3 border-1 border-gray-200"
           >
             back
-          </button>
+          </button> */}
           <LocalForm
             onClose={onClose}
+            previousState={() => {
+              setActve(state.previous);
+              setState({
+                previous: null,
+                current: "industry",
+              });
+            }}
             nextState={() => {
               setActve("done");
               setState({
@@ -128,7 +156,7 @@ const Local = ({ onClose }) => {
 
       {active === "requestorInfo" && (
         <div className="space-y-3">
-          <button
+          {/* <button
             type="button"
             onClick={() => {
               setActve("industry");
@@ -140,10 +168,17 @@ const Local = ({ onClose }) => {
             className="w-20 md:w-20 hover:bg-pink-500 space-x-2 rounded-lg py-2 md:py-3 border-1 border-gray-200"
           >
             back
-          </button>
+          </button> */}
 
           <RequestorForm
             onClose={onClose}
+            previousState={() => {
+              setActve("industry");
+              setState({
+                previous: "industry",
+                current: "",
+              });
+            }}
             nextState={() => {
               setActve("done");
               setState({
