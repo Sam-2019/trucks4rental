@@ -3,6 +3,7 @@ import { useState } from "react";
 import { industries } from "@/lib/utils";
 import MaterialForm from "./forms/material";
 import RequestorForm from "./forms/requestor";
+import checkCircleSVG from "@/assets/svgs/check-circle.svg";
 
 const Local = ({ onClose }) => {
   const [active, setActve] = useState(null);
@@ -155,10 +156,21 @@ const Local = ({ onClose }) => {
       )}
 
       {active === "done" && (
-        <div className="space-y-3">
-          <p className="bg-green-500">Success</p>
+        <div className="space-y-3 text-center">
+          <div className="space-4-8 p-9 rounded-lg text-center">
+            <div className="mb-4 flex justify-center">
+              <img src={checkCircleSVG} alt="whatsapp" width="100" />
+            </div>
 
-          <div className="flex flex-row justify-end">
+            <p className="mb-4 font-semibold">
+              Request successfully submitted.
+            </p>
+            <p className="font-light">
+              Our truck specialists will contact you as soon as possible.
+            </p>
+          </div>
+
+          {/* <div className="flex flex-row justify-end">
             <button
               type="button"
               onClick={handleClose}
@@ -166,7 +178,7 @@ const Local = ({ onClose }) => {
             >
               Close
             </button>
-          </div>
+          </div> */}
         </div>
       )}
 

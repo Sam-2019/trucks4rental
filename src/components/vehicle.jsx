@@ -69,14 +69,14 @@ const Contact = () => {
         >
           <NavLink to="#" className="flex flex-row items-center">
             <Phone size={23} />
-            <p className="text-sm">Call us</p>
+            <p className="text-lg md:text-sm">Call us</p>
           </NavLink>
         </Button>
 
         <Button asChild variant="outline" size="lg" className="w-full md:w-60">
           <NavLink to="#" className="flex flex-row items-center">
             <MessageCircle size={23} />
-            <p className="text-sm">Chat with us</p>
+            <p className="text-lg md:text-sm">Chat with us</p>
           </NavLink>
         </Button>
 
@@ -88,7 +88,7 @@ const Contact = () => {
         >
           <NavLink to="#" className="flex flex-row items-center">
             <Mail size={23} />
-            <p className="text-sm">Email us</p>
+            <p className="text-lg md:text-sm">Email us</p>
           </NavLink>
         </Button>
 
@@ -100,7 +100,7 @@ const Contact = () => {
         >
           <NavLink to="#" className="flex flex-row items-center">
             <img src={whatappSvg} alt="whatsapp" width="20" />
-            <p className="text-sm"> Send a Whatsapp message</p>
+            <p className="text-lg md:text-sm"> Send a Whatsapp message</p>
           </NavLink>
         </Button>
       </div>

@@ -109,7 +109,7 @@ export default function Specify({ nextStep, onClose }) {
             <button
               type="button"
               onClick={() => editForm()}
-              className="px-8 py-3 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
+              className="px-5 py-2 text-gray-700 hover:bg-gray-200 font-semibold rounded-lg"
             >
               Previous
             </button>
@@ -118,7 +118,7 @@ export default function Specify({ nextStep, onClose }) {
               <button
                 type="button"
                 onClick={() => handleNextStep()}
-                className="px-8 py-3 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
+                className="px-5 py-2 font-semibold bg-amber-600 text-white border-2 border-amber-600 hover:bg-amber-700 hover:border-amber-700 transition-all duration-300 hover:shadow-lg rounded-lg"
               >
                 Next
               </button>
