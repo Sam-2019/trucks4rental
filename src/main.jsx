@@ -10,43 +10,49 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import Root from "./Root.jsx";
 import Login from "./pages/Login.jsx";
-import { stocks } from "./lib/utils.js";
+import { stock } from "./lib/utils.js";
 import Signup from "./pages/Signup.jsx";
 import Vehicle from "./pages/Vehicle.jsx";
 import EditVehicle from "./pages/EditVehicle.jsx";
 import ResetPassword from "./pages/ResetPassword.jsx";
 
 async function vehicleLoader({ params }) {
- const filterValue = params.vid;
- const filteredStocks = stocks.filter((val) => val.number.includes(filterValue));
- return { vehicle: filteredStocks[0] };
+  const filterValue = params.vid;
+  const filteredStock = stock.filter((val) => val.number.includes(filterValue));
+  return { vehicle: filteredStock[0] };
 }
 
 const router = createBrowserRouter([
- {
-  path: "/",
-  Component: Root,
-  children: [
-   { index: true, Component: Home },
-   { path: "privacy-policy", Component: PrivacyPolicy },
-   { path: "contact", Component: Contact },
-   { path: "services", Component: Services },
-   { path: "about", Component: null },
-
-   {
-    path: "inventory",
+  {
+    path: "/",
+    Component: Root,
     children: [
-     { index: true, Component: Inventory },
-     { path: "vehicle/details/:vid/:vname", loader: vehicleLoader, Component: Vehicle },
-     { path: "vehicle/:pid/edit", Component: EditVehicle },
+      { index: true, Component: Home },
+      { path: "privacy-policy", Component: PrivacyPolicy },
+      { path: "contact", Component: Contact },
+      { path: "services", Component: Services },
+      { path: "about", Component: null },
+
+      {
+        path: "inventory",
+        children: [
+          { index: true, Component: Inventory },
+          {
+            path: "vehicle/details/:vid/:vname",
+            loader: vehicleLoader,
+            Component: Vehicle,
+          },
+          { path: "vehicle/:pid/edit", Component: EditVehicle },
+        ],
+      },
+      { path: "terms-and-conditions", Component: TermsAndConditions },
     ],
-   },
-   { path: "terms-and-conditions", Component: TermsAndConditions },
-  ],
- },
- { path: "login", Component: Login },
- { path: "signup", Component: Signup },
- { path: "reset-password", Component: ResetPassword },
+  },
+  { path: "login", Component: Login },
+  { path: "signup", Component: Signup },
+  { path: "reset-password", Component: ResetPassword },
 ]);
 
-createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);
+createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);

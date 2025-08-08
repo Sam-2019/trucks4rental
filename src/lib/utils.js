@@ -16,9 +16,9 @@ import truck from "../assets/icons/truck.png";
 import mixer from "../assets/icons/mixer.png";
 import loading_box from "../assets/icons/loading_box.png";
 
-export  const getYear = () => {
+export const getYear = () => {
   return new Date().getFullYear();
- };
+};
 
 export const numberFormat = new Intl.NumberFormat("en-US");
 
@@ -251,58 +251,6 @@ export const foreignRequest = yup
 export const siteName = "Trucks4Rental";
 export const domain = "Trucks4Rental.com";
 export const defaultPlaceholder = "m@example.com";
-
-export const getDisplayNamesFromSearchParams = (queryString, headersData) => {
-  const displayNames = [];
-  const urlNames = [];
-
-  // Create a URLSearchParams object to easily parse the query string
-  const params = new URLSearchParams(queryString);
-
-  // Collect all search parameter keys that are set to 'true'
-  const activeSearchParams = [];
-  for (const [key, value] of params.entries()) {
-    // console.log({ key, value });
-    if (value === "true") {
-      activeSearchParams.push(key);
-    }
-  }
-
-  // Iterate through each main category in the headers data
-  for (const categoryKey in headersData) {
-    // Ensure we are processing own properties that have a subList
-
-    if (
-      Object.prototype.hasOwnProperty.call(headersData, categoryKey) &&
-      headersData[categoryKey].subList
-    ) {
-      const subList = headersData[categoryKey].subList;
-
-      // Iterate through each item in the subList using for...of
-      for (const item of subList) {
-        // Check if the item's searchParam matches any of the active search parameters
-        if (activeSearchParams.includes(item.searchParam)) {
-          displayNames.push({ key: item.displayName, value: item.searchParam });
-          urlNames.push({
-            key: item.searchParam,
-            value: "true",
-            displayName: item.displayName,
-          });
-        }
-      }
-    }
-  }
-
-  return { displayNames, urlNames };
-};
-
-export const clearArray = (arr) => {
-  if (Array.isArray(arr)) {
-    arr.length = 0;
-  } else {
-    console.error("The provided argument is not an array.");
-  }
-};
 
 export const truckTypes = [
   {
@@ -2124,7 +2072,7 @@ export const recommended_trucks = [
     configuration: "",
     axlesCount: "",
     suspensionType: "",
-    type: "tractor_unit",
+    type: "tractorunit",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
     images: [
@@ -2177,7 +2125,7 @@ export const recommended_trucks = [
     configuration: "6x2",
     axlesCount: "",
     suspensionType: "",
-    type: "tractor_unit",
+    type: "tractorunit",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
@@ -2230,7 +2178,7 @@ export const recommended_trucks = [
     configuration: "",
     axlesCount: "3",
     suspensionType: "full air suspension",
-    type: "semi_trailer",
+    type: "semitrailer",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
@@ -2286,7 +2234,7 @@ export const comparable_trucks = [
     configuration: "",
     axlesCount: "",
     suspensionType: "",
-    type: "tractor_unit",
+    type: "tractorunit",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
     images: [
@@ -2339,7 +2287,7 @@ export const comparable_trucks = [
     configuration: "6x2",
     axlesCount: "",
     suspensionType: "",
-    type: "tractor_unit",
+    type: "tractorunit",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
@@ -2392,7 +2340,7 @@ export const comparable_trucks = [
     configuration: "",
     axlesCount: "3",
     suspensionType: "full air suspension",
-    type: "semi_trailer",
+    type: "semitrailer",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
@@ -2433,7 +2381,7 @@ export const comparable_trucks = [
   },
 ];
 
-export const stocks = [
+export const stock = [
   {
     id: 0,
     new: true,
@@ -2448,7 +2396,7 @@ export const stocks = [
     configuration: "",
     axlesCount: "",
     suspensionType: "",
-    type: "tractor_unit",
+    type: "tractorunit",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318678/MERCEDES-BENZACTROS1845LS",
     images: [
@@ -2501,7 +2449,7 @@ export const stocks = [
     configuration: "6x2",
     axlesCount: "",
     suspensionType: "",
-    type: "tractor_unit",
+    type: "tractorunit",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318824/VOLVOFH650XL6X2ADRALCOAS",
     images: [
@@ -2554,7 +2502,7 @@ export const stocks = [
     configuration: "",
     axlesCount: "3",
     suspensionType: "full air suspension",
-    type: "semi_trailer",
+    type: "semitrailer",
     currencySuffix: "Excl. vat",
     url: "/inventory/vehicle/details/318200/MAGYARSR34Ibex-GardnerDenver",
     images: [
@@ -2729,10 +2677,67 @@ export const emissionStandard = [
   },
 ];
 
+export const getDisplayNamesFromSearchParams = (
+  queryString,
+  headersData,
+  stock
+) => {
+  const displayNames = [];
+  const urlNames = [];
+
+  // Create a URLSearchParams object to easily parse the query string
+  const params = new URLSearchParams(queryString);
+
+  // Collect all search parameter keys that are set to 'true'
+  const activeSearchParams = [];
+  for (const [key, value] of params.entries()) {
+    // console.log({ key, value });
+    if (value === "true") {
+      activeSearchParams.push(key);
+    }
+  }
+
+  // Iterate through each main category in the headers data
+  for (const categoryKey in headersData) {
+    // Ensure we are processing own properties that have a subList
+
+    if (
+      Object.prototype.hasOwnProperty.call(headersData, categoryKey) &&
+      headersData[categoryKey].subList
+    ) {
+      const subList = headersData[categoryKey].subList;
+
+      // Iterate through each item in the subList using for...of
+      for (const item of subList) {
+        // Check if the item's searchParam matches any of the active search parameters
+        if (activeSearchParams.includes(item.searchParam)) {
+          displayNames.push({ key: item.displayName, value: item.searchParam });
+          urlNames.push({
+            key: item.searchParam,
+            value: "true",
+            displayName: item.displayName,
+          });
+        }
+      }
+    }
+  }
+
+  const filteredItems = filterStocksFromUrl(stock, queryString);
+  return { displayNames, urlNames, filteredItems };
+};
+
+export const clearArray = (arr) => {
+  if (Array.isArray(arr)) {
+    arr.length = 0;
+  } else {
+    console.error("The provided argument is not an array.");
+  }
+};
+
 /**
  * Sorts an array of stock objects based on a specified criteria.
  *
- * @param {Array<Object>} stocks - The array of stock objects to sort.
+ * @param {Array<Object>} stock - The array of stock objects to sort.
  * @param {string} sortOption - The sorting criteria.
  * - 'price asc': Sort by price in ascending order.
  * - 'price desc': Sort by price in descending order.
@@ -2740,9 +2745,9 @@ export const emissionStandard = [
  * - 'matriculationYear desc': Sort by matriculationYear in descending order.
  * @returns {Array<Object>} A new array containing the sorted stock objects.
  */
-export function sortStocks(stocks, sortOption) {
+export function sortStocks(stock, sortOption) {
   // Create a copy of the array to avoid mutating the original array.
-  const sortedStocks = [...stocks];
+  const sortedStocks = [...stock];
 
   // Helper function to parse mileage string into a number.
   const parseMileage = (mileageStr) => {
@@ -2802,10 +2807,41 @@ export function sortStocks(stocks, sortOption) {
       break;
     default:
       console.warn(
-        `Unknown sort option: ${sortOption}. Returning unsorted stocks.`
+        `Unknown sort option: ${sortOption}. Returning unsorted stock.`
       );
       break;
   }
 
   return sortedStocks;
+}
+
+/**
+ * Returns a new array of stock objects filtered by a type specified in a URL query string.
+ *
+ * @param {string} url - The URL string to parse, e.g., "inventory?kind-tractorunit=true".
+ * @returns {Array<Object>} A new array containing the filtered stock objects.
+ */
+export function filterStocksFromUrl(stock, url) {
+  if (!url) return stock;
+  const urlSearchParams = new URLSearchParams(url.split("?")[1]);
+  const typesToFilter = [];
+
+  // Iterate over all URL parameters
+  for (const [key, value] of urlSearchParams.entries()) {
+    // Check if the key starts with 'kind-' and the value is 'true'
+    if (key.startsWith("kind-") && value === "true") {
+      // Extract the type from the key, e.g., 'tractorunit' from 'kind-tractorunit'
+      const type = key.substring("kind-".length);
+      typesToFilter.push(type);
+    }
+  }
+
+  // If no types are found in the URL, return the original array
+  if (typesToFilter.length === 0) {
+    return stock;
+  }
+
+  const results = stock.filter((stock) => typesToFilter.includes(stock.type));
+  // Filter the stock array based on the types found in the URL
+  return results;
 }

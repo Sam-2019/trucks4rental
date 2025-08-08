@@ -1,27 +1,27 @@
 import {
   domain,
-  stocks,
+  stock,
   siteName,
   sortStocks,
   headers as headersData,
   getDisplayNamesFromSearchParams,
 } from "../lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router";
 import { ChevronsDown, ChevronsUp, Trash2, X } from "lucide-react";
 import { TruckCard, TruckCardMobileNew } from "../components/truck/truckCard";
 
 export default function Inventory() {
   const location = useLocation();
-  const [inventory, setInventory] = useState(stocks);
+
   const [searchParams, setSearchParams] = useSearchParams();
 
   const searchQuery = location.search;
   const queryString1 = searchQuery ? location.search : null;
-  const { displayNames, urlNames } = getDisplayNamesFromSearchParams(
-    queryString1,
-    headersData
-  );
+  const { displayNames, urlNames, filteredItems } =
+    getDisplayNamesFromSearchParams(queryString1, headersData, stock);
+
+  const [inventory, setInventory] = useState(filteredItems);
 
   const [checkedItems, setCheckedItems] = useState(() => {
     const initialChecked = {};
@@ -32,6 +32,7 @@ export default function Inventory() {
         initialChecked[param.key] = false;
       }
     }
+
     return initialChecked;
   });
 
@@ -49,6 +50,7 @@ export default function Inventory() {
     } else {
       searchParams.delete(`${name}`);
     }
+
     setSearchParams(searchParams);
   };
 
@@ -68,10 +70,15 @@ export default function Inventory() {
   };
 
   const sortInventory = (value) => {
-    if (value === "default-sorting") return setInventory(stocks);
-    const sortitems = sortStocks(inventory, value);
-    setInventory(sortitems);
+    if (value === "default-sorting") return setInventory(filteredItems);
+
+    const sortItems = sortStocks(inventory, value);
+    setInventory(sortItems);
   };
+
+  useEffect(() => {
+    setInventory(filteredItems);
+  }, [stock, queryString1]);
 
   return (
     <div>
@@ -139,6 +146,7 @@ export default function Inventory() {
                       </div>
                     ))}
                   </div>
+
                   {header.subList.length > 5 && (
                     <div
                       onClick={() => setShowAll(!showAll)}
@@ -176,13 +184,14 @@ export default function Inventory() {
                 {displayNames.map((item) => (
                   <div
                     key={item.key}
-                    className="flex flex-row items-center bg-slate-200 rounded-lg py-2 px-3 hover:text-amber-600"
+                    className="flex flex-row items-center bg-slate-200 rounded-lg py-2 px-3"
                   >
                     <p className="w-auto mr-2">{item.key}</p>
                     <span>
                       <X
                         size={18}
                         onClick={() => handleParamRemove(item.value)}
+                        className="hover:text-red-500"
                       />
                     </span>
                   </div>
